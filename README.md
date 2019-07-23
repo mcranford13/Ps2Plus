@@ -1,4 +1,4 @@
-**PS2 Plus**
+# **PS2 Plus**
 
 This project is a work in progress for making a PS2 Controller emulator. It was designed for the **PIC16F18876** microcontroller. As of right now the controller emulation is working great. There are still some features that I want to add but the main part of the project is complete. 
 
@@ -16,17 +16,17 @@ This project consists of several smaller projects each with its own folder, and 
 
 **docs** - Contains datasheets and other useful documentation.
 
-**TODO**
+## **TODO**
 
 - Different analog sticks support
 - Bootloader
 - PS2 Updater Application
 
-**Build**
+## **Build**
 
-You will need a pickit3 and MPLAB (_free_) to program this. To build from source, open the firmware project in MPLAB and click 'run'. This will compile the project and then initiate the transfer to the mcu.
+You will need a pickit3, MPLAB (_free_), and XC8 compiler to flash this. To build from source, open the firmware project in MPLAB and click 'run'. This will compile the project and then initiate the transfer to the mcu.
 
-**Acknowledgements**
+## **Acknowledgements**
 
 This project has only moved forward due to these individuals and sites (in no particular order):
 
