@@ -6,15 +6,15 @@ There are several hold-ups keeping this project from being complete, the main on
 
 This project consists of several smaller projects each with its own folder, and is as follows:
 
-firmware - Main code of the project. Contains the PS2 protocol code.
+**firmware** - Main code of the project. Contains the PS2 protocol code.
 
-hardware - The schematics and pcb design of the project. Includes information regarding external circuitry.
+**hardware** - The schematics and pcb design of the project. Includes information regarding external circuitry.
 
-updater - The PS2 application for updating the controller. **NOTE:** This application is currently unfinished.
+**updater** - The PS2 application for updating the controller.
 
-bootloader - The bootloader code for the mcu. **NOTE:** This part of the project is currently unfinished.
+**bootloader** - The bootloader code for the mcu.
 
-docs - Contains datasheets and other useful documentation.
+**docs** - Contains datasheets and other useful documentation.
 
 **TODO**
 
