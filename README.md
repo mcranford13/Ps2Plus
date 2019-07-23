@@ -26,6 +26,8 @@ This project consists of several smaller projects each with its own folder, and 
 
 You will need a pickit3, MPLAB (_free_), and XC8 compiler to flash this. To build from source, open the firmware project in MPLAB and click 'run'. This will compile the project and then initiate the transfer to the mcu.
 
+The correct pinout of the microcontroller can be found in the **docs** folder.
+
 ## **Acknowledgements**
 
 This project has only moved forward due to these individuals and sites (in no particular order):
