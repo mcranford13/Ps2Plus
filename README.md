@@ -1,2 +1,4 @@
-# Ps2Plus
-PS2 controller emulator designed for the PIC16F18876
+This project will contain the playstation controller emulator software a.k.a
+Ps2Plus. 
+
+
