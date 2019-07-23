@@ -5,10 +5,15 @@ This project is a work in progress for making a PS2 Controller emulator. It was 
 There are several hold-ups keeping this project from being complete, the main one being that writing an application for the PS2 and being able to send custom commands to the controller is difficult. I am slowly deciphering everything done by the PS2Dev team but it is slow going. If anyone would like to contribute or offer help/advice, I would gladly take it.
 
 This project consists of several smaller projects each with its own folder, and is as follows:
+
 firmware - Main code of the project. Contains the PS2 protocol code.
+
 hardware - The schematics and pcb design of the project. Includes information regarding external circuitry.
+
 updater - The PS2 application for updating the controller. **NOTE:** This application is currently unfinished.
+
 bootloader - The bootloader code for the mcu. **NOTE:** This part of the project is currently unfinished.
+
 docs - Contains datasheets and other useful documentation.
 
 **TODO**
@@ -25,9 +30,9 @@ You will need a pickit3 and MPLAB (_free_) to program this. To build from source
 
 This project has only moved forward due to these individuals and sites (in no particular order):
 
-1. [Reverse Engineering the PS2 controller Protocol](http://store.curiousinventor.com/guides/PS2)
-2. [Scanlime's documentation of the PS2 controller protocol](https://gist.github.com/scanlime/5042071)
+1. [Curious Inventor](http://store.curiousinventor.com/guides/PS2) - documentation of the PS2 controller Protocol
+2. [Scanlime](https://gist.github.com/scanlime/5042071) - documentation of the PS2 controller protocol
 3. [Aurelio Manara](https://github.com/Aurelio92/GCPlus) - for answering countless questions and advice.
 4. [Gman](https://gmanmodz.com/) - for initial interest in this project and countless contributions to it. Wrote some of the code.
-5. [PS2Dev Team](https://github.com/ps2dev) - For all the hard and amazing work on homebrew for the PS2.
-6. [JSnowden](https://github.com/JSnowden33/ClassicPlus)
+5. [PS2Dev Team](https://github.com/ps2dev) - for all the hard and amazing work on homebrew for the PS2.
+
