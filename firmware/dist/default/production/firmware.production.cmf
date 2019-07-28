@@ -11,47 +11,54 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$dist/default/production/firmware.production.o
-cinit CODE 0 154 154 2A 2
-text1 CODE 0 323 323 41 2
-text2 CODE 0 3DE 3DE 37 2
-text3 CODE 0 415 415 29 2
-text4 CODE 0 17E 17E 107 2
-text5 CODE 0 3A4 3A4 3A 2
-text6 CODE 0 45A 45A 10 2
-text7 CODE 0 47C 47C 7 2
-text8 CODE 0 474 474 8 2
-text9 CODE 0 49F 49F 1 2
-text10 CODE 0 46A 46A A 2
-text12 CODE 0 48F 48F 5 2
-text13 CODE 0 494 494 5 2
-text14 CODE 0 499 499 4 2
-text15 CODE 0 285 285 9E 2
-idataCOMMON CODE 0 49D 49D 2 2
-maintext CODE 0 364 364 40 2
-cstackCOMMON COMMON 1 70 70 5 1
-cstackBANK0 BANK0 1 5E 5E E 1
-inittext CODE 0 483 483 6 2
-intentry CODE 0 4 4 14E 2
-bssBANK0 BANK0 1 20 20 22 1
-bssBANK1 BANK1 1 A0 A0 20 1
-idataBANK0 CODE 0 43E 43E 1C 2
-dataBANK0 BANK0 1 42 42 1C 1
-dataCOMMON COMMON 1 78 78 2 1
-clrtext CODE 0 489 489 6 2
-bssCOMMON COMMON 1 75 75 3 1
-$/tmp/xcXtHtW6H.o
+$/tmp/xcXcEgBsg.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 152 152 2 2
 config CONFIG 0 8007 8007 5 2
+$dist/default/production/firmware.production.o
+cinit CODE 0 154 154 34 2
+text1 CODE 0 675 675 69 2
+text2 CODE 0 7B0 7B0 37 2
+text3 CODE 0 776 776 3A 2
+text4 CODE 0 F4C F4C 10 2
+text5 CODE 0 7F9 7F9 7 2
+text6 CODE 0 F22 F22 8 2
+text7 CODE 0 188 188 1DB 2
+text8 CODE 0 7E7 7E7 12 2
+text9 CODE 0 FB6 FB6 21 2
+text10 CODE 0 F5C F5C 1C 2
+text11 CODE 0 6DE 6DE 52 2
+text12 CODE 0 363 363 146 2
+text13 CODE 0 4A9 4A9 12D 2
+text14 CODE 0 FD7 FD7 29 2
+text15 CODE 0 F95 F95 21 2
+text16 CODE 0 F1B F1B 7 2
+text17 CODE 0 F2A F2A A 2
+text19 CODE 0 F16 F16 5 2
+text20 CODE 0 F11 F11 5 2
+text21 CODE 0 F0D F0D 4 2
+text22 CODE 0 5D6 5D6 9F 2
+idataCOMMON CODE 0 2 2 2 2
+maintext CODE 0 730 730 46 2
+cstackCOMMON COMMON 1 70 70 5 1
+cstackBANK0 BANK0 1 20 20 30 1
+inittext CODE 0 F40 F40 C 2
+intentry CODE 0 4 4 14E 2
+bssBANK0 BANK0 1 6D 6D 2 1
+bssBANK1 BANK1 1 A0 A0 40 1
+idataBANK0 CODE 0 F78 F78 1D 2
+dataBANK0 BANK0 1 50 50 1D 1
+dataCOMMON COMMON 1 78 78 2 1
+clrtext CODE 0 F34 F34 C 2
+bssCOMMON COMMON 1 75 75 3 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 6C-6F 1
-RAM C0-EF 1
+RAM 6F-6F 1
+RAM E0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
 RAM 220-26F 1
@@ -62,22 +69,9 @@ RAM 420-46F 1
 RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
-RAM 620-66F 1
-RAM 6A0-6EF 1
-RAM 720-76F 1
-RAM 7A0-7EF 1
-RAM 820-86F 1
-RAM 8A0-8EF 1
-RAM 920-96F 1
-RAM 9A0-9EF 1
-RAM A20-A6F 1
-RAM AA0-AEF 1
-RAM B20-B6F 1
-RAM BA0-BEF 1
-RAM C20-C6F 1
-RAM CA0-CBF 1
-BANK0 6C-6F 1
-BANK1 C0-EF 1
+RAM 620-64F 1
+BANK0 6F-6F 1
+BANK1 E0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
 BANK4 220-26F 1
@@ -86,10 +80,10 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 2-3 2
-CONST 4A0-3FFF 2
-ENTRY 2-3 2
-ENTRY 4A0-3FFF 2
+CONST 800-F0C 2
+CONST 1000-3FFF 2
+ENTRY 800-F0C 2
+ENTRY 1000-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -113,9 +107,9 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2070-27EF 1
-CODE 2-3 2
-CODE 4A0-3FFF 2
+STACK 2090-23EF 1
+CODE 800-F0C 2
+CODE 1000-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -128,27 +122,14 @@ SFR8 400-41F 1
 SFR9 480-49F 1
 BANK10 520-56F 1
 BANK11 5A0-5EF 1
-BANK12 620-66F 1
-BANK13 6A0-6EF 1
-BANK14 720-76F 1
-BANK15 7A0-7EF 1
-BANK16 820-86F 1
-BANK17 8A0-8EF 1
-BANK18 920-96F 1
-BANK19 9A0-9EF 1
-BANK20 A20-A6F 1
-BANK21 AA0-AEF 1
-BANK22 B20-B6F 1
-BANK23 BA0-BEF 1
-BANK24 C20-C6F 1
-BANK25 CA0-CBF 1
+BANK12 620-64F 1
 BIGRAM 2000-27EF 1
 COMMON 7A-7D 1
 EEDATA F000-F0FF 2
-STRCODE 2-3 2
-STRCODE 4A0-3FFF 2
-STRING 2-3 2
-STRING 4A0-3FFF 2
+STRCODE 800-F0C 2
+STRCODE 1000-3FFF 2
+STRING 800-F0C 2
+STRING 1000-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -163,328 +144,504 @@ STRING 4A0-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/firmware.production.o
-154 cinit CODE >5840:/tmp/xcXHCDGsq
-154 cinit CODE >5843:/tmp/xcXHCDGsq
-154 cinit CODE >5977:/tmp/xcXHCDGsq
-157 cinit CODE >5978:/tmp/xcXHCDGsq
-158 cinit CODE >5979:/tmp/xcXHCDGsq
-15B cinit CODE >5980:/tmp/xcXHCDGsq
-15C cinit CODE >5984:/tmp/xcXHCDGsq
-15D cinit CODE >5985:/tmp/xcXHCDGsq
-15E cinit CODE >5986:/tmp/xcXHCDGsq
-15F cinit CODE >5987:/tmp/xcXHCDGsq
-160 cinit CODE >5988:/tmp/xcXHCDGsq
-161 cinit CODE >5989:/tmp/xcXHCDGsq
-162 cinit CODE >5990:/tmp/xcXHCDGsq
-163 cinit CODE >5991:/tmp/xcXHCDGsq
-164 cinit CODE >5992:/tmp/xcXHCDGsq
-165 cinit CODE >5993:/tmp/xcXHCDGsq
-168 cinit CODE >6010:/tmp/xcXHCDGsq
-169 cinit CODE >6011:/tmp/xcXHCDGsq
-16A cinit CODE >6012:/tmp/xcXHCDGsq
-16B cinit CODE >6016:/tmp/xcXHCDGsq
-16C cinit CODE >6017:/tmp/xcXHCDGsq
-16D cinit CODE >6018:/tmp/xcXHCDGsq
-16E cinit CODE >6019:/tmp/xcXHCDGsq
-16F cinit CODE >6020:/tmp/xcXHCDGsq
-170 cinit CODE >6021:/tmp/xcXHCDGsq
-173 cinit CODE >6025:/tmp/xcXHCDGsq
-174 cinit CODE >6026:/tmp/xcXHCDGsq
-175 cinit CODE >6027:/tmp/xcXHCDGsq
-176 cinit CODE >6028:/tmp/xcXHCDGsq
-177 cinit CODE >6029:/tmp/xcXHCDGsq
-178 cinit CODE >6030:/tmp/xcXHCDGsq
-17A cinit CODE >6036:/tmp/xcXHCDGsq
-17A cinit CODE >6038:/tmp/xcXHCDGsq
-17B cinit CODE >6039:/tmp/xcXHCDGsq
-17C cinit CODE >6040:/tmp/xcXHCDGsq
-4 intentry CODE >56:/home/matthew/Projects/Ps2Plus/firmware/main.c
-6 intentry CODE >58:/home/matthew/Projects/Ps2Plus/firmware/main.c
-9 intentry CODE >60:/home/matthew/Projects/Ps2Plus/firmware/main.c
-F intentry CODE >62:/home/matthew/Projects/Ps2Plus/firmware/main.c
-10 intentry CODE >70:/home/matthew/Projects/Ps2Plus/firmware/main.c
-14 intentry CODE >71:/home/matthew/Projects/Ps2Plus/firmware/main.c
-17 intentry CODE >72:/home/matthew/Projects/Ps2Plus/firmware/main.c
+154 cinit CODE >6951:/tmp/xcX03OTL5
+154 cinit CODE >6954:/tmp/xcX03OTL5
+154 cinit CODE >7104:/tmp/xcX03OTL5
+157 cinit CODE >7105:/tmp/xcX03OTL5
+158 cinit CODE >7106:/tmp/xcX03OTL5
+15B cinit CODE >7107:/tmp/xcX03OTL5
+15C cinit CODE >7111:/tmp/xcX03OTL5
+15D cinit CODE >7112:/tmp/xcX03OTL5
+15E cinit CODE >7113:/tmp/xcX03OTL5
+15F cinit CODE >7114:/tmp/xcX03OTL5
+160 cinit CODE >7115:/tmp/xcX03OTL5
+161 cinit CODE >7116:/tmp/xcX03OTL5
+162 cinit CODE >7117:/tmp/xcX03OTL5
+163 cinit CODE >7118:/tmp/xcX03OTL5
+164 cinit CODE >7119:/tmp/xcX03OTL5
+165 cinit CODE >7120:/tmp/xcX03OTL5
+166 cinit CODE >7121:/tmp/xcX03OTL5
+167 cinit CODE >7122:/tmp/xcX03OTL5
+16A cinit CODE >7145:/tmp/xcX03OTL5
+16B cinit CODE >7146:/tmp/xcX03OTL5
+16C cinit CODE >7147:/tmp/xcX03OTL5
+16D cinit CODE >7148:/tmp/xcX03OTL5
+16E cinit CODE >7149:/tmp/xcX03OTL5
+16F cinit CODE >7150:/tmp/xcX03OTL5
+170 cinit CODE >7151:/tmp/xcX03OTL5
+171 cinit CODE >7152:/tmp/xcX03OTL5
+172 cinit CODE >7153:/tmp/xcX03OTL5
+175 cinit CODE >7157:/tmp/xcX03OTL5
+176 cinit CODE >7158:/tmp/xcX03OTL5
+177 cinit CODE >7159:/tmp/xcX03OTL5
+178 cinit CODE >7163:/tmp/xcX03OTL5
+179 cinit CODE >7164:/tmp/xcX03OTL5
+17A cinit CODE >7168:/tmp/xcX03OTL5
+17B cinit CODE >7169:/tmp/xcX03OTL5
+17C cinit CODE >7170:/tmp/xcX03OTL5
+17D cinit CODE >7171:/tmp/xcX03OTL5
+17E cinit CODE >7172:/tmp/xcX03OTL5
+17F cinit CODE >7173:/tmp/xcX03OTL5
+180 cinit CODE >7174:/tmp/xcX03OTL5
+181 cinit CODE >7175:/tmp/xcX03OTL5
+182 cinit CODE >7176:/tmp/xcX03OTL5
+184 cinit CODE >7182:/tmp/xcX03OTL5
+184 cinit CODE >7184:/tmp/xcX03OTL5
+185 cinit CODE >7185:/tmp/xcX03OTL5
+186 cinit CODE >7186:/tmp/xcX03OTL5
+4 intentry CODE >57:/home/matthew/Projects/Ps2Plus/firmware/main.c
+6 intentry CODE >59:/home/matthew/Projects/Ps2Plus/firmware/main.c
+9 intentry CODE >61:/home/matthew/Projects/Ps2Plus/firmware/main.c
+F intentry CODE >63:/home/matthew/Projects/Ps2Plus/firmware/main.c
+10 intentry CODE >71:/home/matthew/Projects/Ps2Plus/firmware/main.c
+14 intentry CODE >72:/home/matthew/Projects/Ps2Plus/firmware/main.c
 17 intentry CODE >73:/home/matthew/Projects/Ps2Plus/firmware/main.c
-1A intentry CODE >78:/home/matthew/Projects/Ps2Plus/firmware/main.c
-1E intentry CODE >79:/home/matthew/Projects/Ps2Plus/firmware/main.c
-22 intentry CODE >81:/home/matthew/Projects/Ps2Plus/firmware/main.c
-25 intentry CODE >86:/home/matthew/Projects/Ps2Plus/firmware/main.c
-29 intentry CODE >87:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2C intentry CODE >89:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2E intentry CODE >94:/home/matthew/Projects/Ps2Plus/firmware/main.c
-32 intentry CODE >95:/home/matthew/Projects/Ps2Plus/firmware/main.c
-34 intentry CODE >96:/home/matthew/Projects/Ps2Plus/firmware/main.c
-35 intentry CODE >97:/home/matthew/Projects/Ps2Plus/firmware/main.c
-36 intentry CODE >98:/home/matthew/Projects/Ps2Plus/firmware/main.c
-3A intentry CODE >99:/home/matthew/Projects/Ps2Plus/firmware/main.c
-3B intentry CODE >100:/home/matthew/Projects/Ps2Plus/firmware/main.c
-3C intentry CODE >102:/home/matthew/Projects/Ps2Plus/firmware/main.c
-3E intentry CODE >103:/home/matthew/Projects/Ps2Plus/firmware/main.c
-3F intentry CODE >104:/home/matthew/Projects/Ps2Plus/firmware/main.c
-40 intentry CODE >105:/home/matthew/Projects/Ps2Plus/firmware/main.c
-42 intentry CODE >117:/home/matthew/Projects/Ps2Plus/firmware/main.c
-5B intentry CODE >128:/home/matthew/Projects/Ps2Plus/firmware/main.c
-5C intentry CODE >140:/home/matthew/Projects/Ps2Plus/firmware/main.c
-6C intentry CODE >154:/home/matthew/Projects/Ps2Plus/firmware/main.c
-6F intentry CODE >155:/home/matthew/Projects/Ps2Plus/firmware/main.c
-74 intentry CODE >156:/home/matthew/Projects/Ps2Plus/firmware/main.c
-78 intentry CODE >157:/home/matthew/Projects/Ps2Plus/firmware/main.c
-7D intentry CODE >162:/home/matthew/Projects/Ps2Plus/firmware/main.c
-7F intentry CODE >163:/home/matthew/Projects/Ps2Plus/firmware/main.c
-80 intentry CODE >164:/home/matthew/Projects/Ps2Plus/firmware/main.c
-81 intentry CODE >165:/home/matthew/Projects/Ps2Plus/firmware/main.c
-82 intentry CODE >166:/home/matthew/Projects/Ps2Plus/firmware/main.c
-83 intentry CODE >167:/home/matthew/Projects/Ps2Plus/firmware/main.c
-85 intentry CODE >178:/home/matthew/Projects/Ps2Plus/firmware/main.c
-86 intentry CODE >203:/home/matthew/Projects/Ps2Plus/firmware/main.c
-8A intentry CODE >204:/home/matthew/Projects/Ps2Plus/firmware/main.c
-8E intentry CODE >207:/home/matthew/Projects/Ps2Plus/firmware/main.c
-8F intentry CODE >215:/home/matthew/Projects/Ps2Plus/firmware/main.c
-90 intentry CODE >225:/home/matthew/Projects/Ps2Plus/firmware/main.c
-92 intentry CODE >226:/home/matthew/Projects/Ps2Plus/firmware/main.c
-93 intentry CODE >227:/home/matthew/Projects/Ps2Plus/firmware/main.c
-94 intentry CODE >228:/home/matthew/Projects/Ps2Plus/firmware/main.c
-96 intentry CODE >244:/home/matthew/Projects/Ps2Plus/firmware/main.c
-9B intentry CODE >245:/home/matthew/Projects/Ps2Plus/firmware/main.c
-9F intentry CODE >247:/home/matthew/Projects/Ps2Plus/firmware/main.c
-A2 intentry CODE >248:/home/matthew/Projects/Ps2Plus/firmware/main.c
-A7 intentry CODE >250:/home/matthew/Projects/Ps2Plus/firmware/main.c
-A8 intentry CODE >252:/home/matthew/Projects/Ps2Plus/firmware/main.c
-AC intentry CODE >253:/home/matthew/Projects/Ps2Plus/firmware/main.c
-B0 intentry CODE >254:/home/matthew/Projects/Ps2Plus/firmware/main.c
-B1 intentry CODE >257:/home/matthew/Projects/Ps2Plus/firmware/main.c
-B2 intentry CODE >265:/home/matthew/Projects/Ps2Plus/firmware/main.c
-B4 intentry CODE >266:/home/matthew/Projects/Ps2Plus/firmware/main.c
-B5 intentry CODE >267:/home/matthew/Projects/Ps2Plus/firmware/main.c
-B9 intentry CODE >268:/home/matthew/Projects/Ps2Plus/firmware/main.c
-BD intentry CODE >269:/home/matthew/Projects/Ps2Plus/firmware/main.c
-C1 intentry CODE >270:/home/matthew/Projects/Ps2Plus/firmware/main.c
-C3 intentry CODE >281:/home/matthew/Projects/Ps2Plus/firmware/main.c
-C5 intentry CODE >282:/home/matthew/Projects/Ps2Plus/firmware/main.c
-C6 intentry CODE >283:/home/matthew/Projects/Ps2Plus/firmware/main.c
-CA intentry CODE >284:/home/matthew/Projects/Ps2Plus/firmware/main.c
-CC intentry CODE >298:/home/matthew/Projects/Ps2Plus/firmware/main.c
-CE intentry CODE >299:/home/matthew/Projects/Ps2Plus/firmware/main.c
-CF intentry CODE >300:/home/matthew/Projects/Ps2Plus/firmware/main.c
-D0 intentry CODE >301:/home/matthew/Projects/Ps2Plus/firmware/main.c
-D4 intentry CODE >302:/home/matthew/Projects/Ps2Plus/firmware/main.c
-D5 intentry CODE >303:/home/matthew/Projects/Ps2Plus/firmware/main.c
-D7 intentry CODE >317:/home/matthew/Projects/Ps2Plus/firmware/main.c
-D9 intentry CODE >318:/home/matthew/Projects/Ps2Plus/firmware/main.c
-DB intentry CODE >319:/home/matthew/Projects/Ps2Plus/firmware/main.c
-DF intentry CODE >320:/home/matthew/Projects/Ps2Plus/firmware/main.c
-E3 intentry CODE >321:/home/matthew/Projects/Ps2Plus/firmware/main.c
-E7 intentry CODE >322:/home/matthew/Projects/Ps2Plus/firmware/main.c
-EB intentry CODE >324:/home/matthew/Projects/Ps2Plus/firmware/main.c
-EC intentry CODE >343:/home/matthew/Projects/Ps2Plus/firmware/main.c
-117 intentry CODE >346:/home/matthew/Projects/Ps2Plus/firmware/main.c
-127 intentry CODE >349:/home/matthew/Projects/Ps2Plus/firmware/main.c
-12B intentry CODE >350:/home/matthew/Projects/Ps2Plus/firmware/main.c
-12D intentry CODE >353:/home/matthew/Projects/Ps2Plus/firmware/main.c
-130 intentry CODE >354:/home/matthew/Projects/Ps2Plus/firmware/main.c
-132 intentry CODE >356:/home/matthew/Projects/Ps2Plus/firmware/main.c
-136 intentry CODE >362:/home/matthew/Projects/Ps2Plus/firmware/main.c
-13E intentry CODE >365:/home/matthew/Projects/Ps2Plus/firmware/main.c
-143 intentry CODE >366:/home/matthew/Projects/Ps2Plus/firmware/main.c
-147 intentry CODE >370:/home/matthew/Projects/Ps2Plus/firmware/main.c
-148 intentry CODE >371:/home/matthew/Projects/Ps2Plus/firmware/main.c
-14C intentry CODE >372:/home/matthew/Projects/Ps2Plus/firmware/main.c
-14E intentry CODE >374:/home/matthew/Projects/Ps2Plus/firmware/main.c
-150 intentry CODE >379:/home/matthew/Projects/Ps2Plus/firmware/main.c
-285 text15 CODE >23:/home/matthew/Projects/Ps2Plus/firmware/main.c
-286 text15 CODE >25:/home/matthew/Projects/Ps2Plus/firmware/main.c
-28B text15 CODE >27:/home/matthew/Projects/Ps2Plus/firmware/main.c
-293 text15 CODE >28:/home/matthew/Projects/Ps2Plus/firmware/main.c
-29B text15 CODE >30:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2A3 text15 CODE >31:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2AB text15 CODE >32:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2B3 text15 CODE >33:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2BB text15 CODE >35:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2BE text15 CODE >37:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2C2 text15 CODE >39:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2CA text15 CODE >40:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2D2 text15 CODE >41:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2DA text15 CODE >42:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2E2 text15 CODE >43:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2EA text15 CODE >44:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2F2 text15 CODE >45:/home/matthew/Projects/Ps2Plus/firmware/main.c
-2FA text15 CODE >46:/home/matthew/Projects/Ps2Plus/firmware/main.c
-302 text15 CODE >47:/home/matthew/Projects/Ps2Plus/firmware/main.c
-30A text15 CODE >48:/home/matthew/Projects/Ps2Plus/firmware/main.c
-312 text15 CODE >49:/home/matthew/Projects/Ps2Plus/firmware/main.c
-31A text15 CODE >50:/home/matthew/Projects/Ps2Plus/firmware/main.c
-322 text15 CODE >54:/home/matthew/Projects/Ps2Plus/firmware/main.c
-499 text14 CODE >27:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-499 text14 CODE >29:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-494 text13 CODE >37:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-494 text13 CODE >39:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-496 text13 CODE >40:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-498 text13 CODE >41:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-48F text12 CODE >32:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-490 text12 CODE >34:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-493 text12 CODE >35:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-46A text10 CODE >15:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-46A text10 CODE >16:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-46D text10 CODE >17:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-46E text10 CODE >18:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-46F text10 CODE >19:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-470 text10 CODE >20:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-472 text10 CODE >21:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-473 text10 CODE >22:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-49F text9 CODE >381:/home/matthew/Projects/Ps2Plus/firmware/main.c
-49F text9 CODE >386:/home/matthew/Projects/Ps2Plus/firmware/main.c
-474 text8 CODE >9:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-474 text8 CODE >10:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-477 text8 CODE >11:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-479 text8 CODE >12:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-47B text8 CODE >13:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-47C text7 CODE >3:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-47C text7 CODE >4:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-47F text7 CODE >5:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-481 text7 CODE >6:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-482 text7 CODE >7:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-45A text6 CODE >10:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-45C text6 CODE >13:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-45E text6 CODE >15:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-460 text6 CODE >20:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-464 text6 CODE >24:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-469 text6 CODE >25:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
-3A4 text5 CODE >63:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3A4 text5 CODE >66:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3A7 text5 CODE >67:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3A9 text5 CODE >68:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3AB text5 CODE >69:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3AD text5 CODE >70:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3AF text5 CODE >73:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3B1 text5 CODE >74:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3B2 text5 CODE >75:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3B4 text5 CODE >76:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3B5 text5 CODE >77:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3B6 text5 CODE >80:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3B8 text5 CODE >81:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3BA text5 CODE >82:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3BC text5 CODE >83:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3BE text5 CODE >84:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3BF text5 CODE >87:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3CD text5 CODE >89:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3CF text5 CODE >90:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3D0 text5 CODE >91:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3D3 text5 CODE >93:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3D6 text5 CODE >95:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3D8 text5 CODE >98:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3D9 text5 CODE >99:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3DA text5 CODE >100:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3DC text5 CODE >101:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-3DD text5 CODE >102:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
-17E text4 CODE >13:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-180 text4 CODE >16:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-184 text4 CODE >17:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-188 text4 CODE >18:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-18C text4 CODE >19:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-190 text4 CODE >20:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-194 text4 CODE >21:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-198 text4 CODE >22:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-19C text4 CODE >23:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1A0 text4 CODE >25:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1A4 text4 CODE >26:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1A8 text4 CODE >27:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1AC text4 CODE >28:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1B0 text4 CODE >29:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1B4 text4 CODE >30:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1B8 text4 CODE >31:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1BC text4 CODE >32:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1C0 text4 CODE >42:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1C3 text4 CODE >43:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1C4 text4 CODE >47:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1CB text4 CODE >48:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1D3 text4 CODE >49:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1D3 text4 CODE >50:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1DA text4 CODE >51:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1E2 text4 CODE >55:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1EE text4 CODE >56:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1F3 text4 CODE >57:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-1FE text4 CODE >59:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-201 text4 CODE >60:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-206 text4 CODE >64:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-212 text4 CODE >65:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-217 text4 CODE >66:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-222 text4 CODE >68:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-225 text4 CODE >69:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-22A text4 CODE >72:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-22A text4 CODE >75:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-232 text4 CODE >76:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-23E text4 CODE >78:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-241 text4 CODE >79:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-249 text4 CODE >82:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-249 text4 CODE >83:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-251 text4 CODE >84:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-25D text4 CODE >86:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-260 text4 CODE >87:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-268 text4 CODE >90:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-268 text4 CODE >93:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-274 text4 CODE >94:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-280 text4 CODE >96:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-284 text4 CODE >97:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-415 text3 CODE >128:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-415 text3 CODE >129:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-419 text3 CODE >130:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-41A text3 CODE >131:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-41C text3 CODE >133:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-41D text3 CODE >134:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-41F text3 CODE >136:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-43D text3 CODE >137:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-3DE text2 CODE >139:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-3E0 text2 CODE >140:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-3F3 text2 CODE >141:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-406 text2 CODE >142:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-413 text2 CODE >144:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-414 text2 CODE >145:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-323 text1 CODE >147:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-323 text1 CODE >150:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-334 text1 CODE >151:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-344 text1 CODE >152:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-354 text1 CODE >153:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-363 text1 CODE >156:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
-364 maintext CODE >388:/home/matthew/Projects/Ps2Plus/firmware/main.c
-364 maintext CODE >390:/home/matthew/Projects/Ps2Plus/firmware/main.c
-367 maintext CODE >391:/home/matthew/Projects/Ps2Plus/firmware/main.c
-36A maintext CODE >394:/home/matthew/Projects/Ps2Plus/firmware/main.c
-36F maintext CODE >397:/home/matthew/Projects/Ps2Plus/firmware/main.c
-370 maintext CODE >398:/home/matthew/Projects/Ps2Plus/firmware/main.c
-371 maintext CODE >399:/home/matthew/Projects/Ps2Plus/firmware/main.c
-372 maintext CODE >403:/home/matthew/Projects/Ps2Plus/firmware/main.c
-378 maintext CODE >404:/home/matthew/Projects/Ps2Plus/firmware/main.c
-37B maintext CODE >406:/home/matthew/Projects/Ps2Plus/firmware/main.c
-380 maintext CODE >408:/home/matthew/Projects/Ps2Plus/firmware/main.c
-383 maintext CODE >409:/home/matthew/Projects/Ps2Plus/firmware/main.c
-387 maintext CODE >410:/home/matthew/Projects/Ps2Plus/firmware/main.c
-387 maintext CODE >412:/home/matthew/Projects/Ps2Plus/firmware/main.c
-38A maintext CODE >413:/home/matthew/Projects/Ps2Plus/firmware/main.c
-38B maintext CODE >416:/home/matthew/Projects/Ps2Plus/firmware/main.c
-38F maintext CODE >418:/home/matthew/Projects/Ps2Plus/firmware/main.c
-393 maintext CODE >420:/home/matthew/Projects/Ps2Plus/firmware/main.c
-394 maintext CODE >421:/home/matthew/Projects/Ps2Plus/firmware/main.c
-398 maintext CODE >422:/home/matthew/Projects/Ps2Plus/firmware/main.c
-39B maintext CODE >423:/home/matthew/Projects/Ps2Plus/firmware/main.c
-39C maintext CODE >427:/home/matthew/Projects/Ps2Plus/firmware/main.c
-3A0 maintext CODE >428:/home/matthew/Projects/Ps2Plus/firmware/main.c
-489 clrtext CODE >5999:/tmp/xcXHCDGsq
-489 clrtext CODE >6000:/tmp/xcXHCDGsq
-48A clrtext CODE >6001:/tmp/xcXHCDGsq
-48A clrtext CODE >6002:/tmp/xcXHCDGsq
-48B clrtext CODE >6003:/tmp/xcXHCDGsq
-48C clrtext CODE >6004:/tmp/xcXHCDGsq
-48D clrtext CODE >6005:/tmp/xcXHCDGsq
-48E clrtext CODE >6006:/tmp/xcXHCDGsq
-483 inittext CODE >5966:/tmp/xcXHCDGsq
-483 inittext CODE >5967:/tmp/xcXHCDGsq
-484 inittext CODE >5968:/tmp/xcXHCDGsq
-484 inittext CODE >5969:/tmp/xcXHCDGsq
-485 inittext CODE >5970:/tmp/xcXHCDGsq
-486 inittext CODE >5971:/tmp/xcXHCDGsq
-487 inittext CODE >5972:/tmp/xcXHCDGsq
-488 inittext CODE >5973:/tmp/xcXHCDGsq
+17 intentry CODE >74:/home/matthew/Projects/Ps2Plus/firmware/main.c
+1A intentry CODE >79:/home/matthew/Projects/Ps2Plus/firmware/main.c
+1E intentry CODE >80:/home/matthew/Projects/Ps2Plus/firmware/main.c
+22 intentry CODE >82:/home/matthew/Projects/Ps2Plus/firmware/main.c
+25 intentry CODE >87:/home/matthew/Projects/Ps2Plus/firmware/main.c
+29 intentry CODE >88:/home/matthew/Projects/Ps2Plus/firmware/main.c
+2C intentry CODE >90:/home/matthew/Projects/Ps2Plus/firmware/main.c
+2E intentry CODE >95:/home/matthew/Projects/Ps2Plus/firmware/main.c
+32 intentry CODE >96:/home/matthew/Projects/Ps2Plus/firmware/main.c
+34 intentry CODE >97:/home/matthew/Projects/Ps2Plus/firmware/main.c
+35 intentry CODE >98:/home/matthew/Projects/Ps2Plus/firmware/main.c
+36 intentry CODE >99:/home/matthew/Projects/Ps2Plus/firmware/main.c
+3A intentry CODE >100:/home/matthew/Projects/Ps2Plus/firmware/main.c
+3B intentry CODE >101:/home/matthew/Projects/Ps2Plus/firmware/main.c
+3C intentry CODE >103:/home/matthew/Projects/Ps2Plus/firmware/main.c
+3E intentry CODE >104:/home/matthew/Projects/Ps2Plus/firmware/main.c
+3F intentry CODE >105:/home/matthew/Projects/Ps2Plus/firmware/main.c
+40 intentry CODE >106:/home/matthew/Projects/Ps2Plus/firmware/main.c
+42 intentry CODE >118:/home/matthew/Projects/Ps2Plus/firmware/main.c
+5B intentry CODE >129:/home/matthew/Projects/Ps2Plus/firmware/main.c
+5C intentry CODE >141:/home/matthew/Projects/Ps2Plus/firmware/main.c
+6C intentry CODE >155:/home/matthew/Projects/Ps2Plus/firmware/main.c
+6F intentry CODE >156:/home/matthew/Projects/Ps2Plus/firmware/main.c
+74 intentry CODE >157:/home/matthew/Projects/Ps2Plus/firmware/main.c
+78 intentry CODE >158:/home/matthew/Projects/Ps2Plus/firmware/main.c
+7D intentry CODE >163:/home/matthew/Projects/Ps2Plus/firmware/main.c
+7F intentry CODE >164:/home/matthew/Projects/Ps2Plus/firmware/main.c
+80 intentry CODE >165:/home/matthew/Projects/Ps2Plus/firmware/main.c
+81 intentry CODE >166:/home/matthew/Projects/Ps2Plus/firmware/main.c
+82 intentry CODE >167:/home/matthew/Projects/Ps2Plus/firmware/main.c
+83 intentry CODE >168:/home/matthew/Projects/Ps2Plus/firmware/main.c
+85 intentry CODE >179:/home/matthew/Projects/Ps2Plus/firmware/main.c
+86 intentry CODE >204:/home/matthew/Projects/Ps2Plus/firmware/main.c
+8A intentry CODE >205:/home/matthew/Projects/Ps2Plus/firmware/main.c
+8E intentry CODE >208:/home/matthew/Projects/Ps2Plus/firmware/main.c
+8F intentry CODE >216:/home/matthew/Projects/Ps2Plus/firmware/main.c
+90 intentry CODE >226:/home/matthew/Projects/Ps2Plus/firmware/main.c
+92 intentry CODE >227:/home/matthew/Projects/Ps2Plus/firmware/main.c
+93 intentry CODE >228:/home/matthew/Projects/Ps2Plus/firmware/main.c
+94 intentry CODE >229:/home/matthew/Projects/Ps2Plus/firmware/main.c
+96 intentry CODE >245:/home/matthew/Projects/Ps2Plus/firmware/main.c
+9B intentry CODE >246:/home/matthew/Projects/Ps2Plus/firmware/main.c
+9F intentry CODE >248:/home/matthew/Projects/Ps2Plus/firmware/main.c
+A2 intentry CODE >249:/home/matthew/Projects/Ps2Plus/firmware/main.c
+A7 intentry CODE >251:/home/matthew/Projects/Ps2Plus/firmware/main.c
+A8 intentry CODE >253:/home/matthew/Projects/Ps2Plus/firmware/main.c
+AC intentry CODE >254:/home/matthew/Projects/Ps2Plus/firmware/main.c
+B0 intentry CODE >255:/home/matthew/Projects/Ps2Plus/firmware/main.c
+B1 intentry CODE >258:/home/matthew/Projects/Ps2Plus/firmware/main.c
+B2 intentry CODE >266:/home/matthew/Projects/Ps2Plus/firmware/main.c
+B4 intentry CODE >267:/home/matthew/Projects/Ps2Plus/firmware/main.c
+B5 intentry CODE >268:/home/matthew/Projects/Ps2Plus/firmware/main.c
+B9 intentry CODE >269:/home/matthew/Projects/Ps2Plus/firmware/main.c
+BD intentry CODE >270:/home/matthew/Projects/Ps2Plus/firmware/main.c
+C1 intentry CODE >271:/home/matthew/Projects/Ps2Plus/firmware/main.c
+C3 intentry CODE >282:/home/matthew/Projects/Ps2Plus/firmware/main.c
+C5 intentry CODE >283:/home/matthew/Projects/Ps2Plus/firmware/main.c
+C6 intentry CODE >284:/home/matthew/Projects/Ps2Plus/firmware/main.c
+CA intentry CODE >285:/home/matthew/Projects/Ps2Plus/firmware/main.c
+CC intentry CODE >299:/home/matthew/Projects/Ps2Plus/firmware/main.c
+CE intentry CODE >300:/home/matthew/Projects/Ps2Plus/firmware/main.c
+CF intentry CODE >301:/home/matthew/Projects/Ps2Plus/firmware/main.c
+D0 intentry CODE >302:/home/matthew/Projects/Ps2Plus/firmware/main.c
+D4 intentry CODE >303:/home/matthew/Projects/Ps2Plus/firmware/main.c
+D5 intentry CODE >304:/home/matthew/Projects/Ps2Plus/firmware/main.c
+D7 intentry CODE >318:/home/matthew/Projects/Ps2Plus/firmware/main.c
+D9 intentry CODE >319:/home/matthew/Projects/Ps2Plus/firmware/main.c
+DB intentry CODE >320:/home/matthew/Projects/Ps2Plus/firmware/main.c
+DF intentry CODE >321:/home/matthew/Projects/Ps2Plus/firmware/main.c
+E3 intentry CODE >322:/home/matthew/Projects/Ps2Plus/firmware/main.c
+E7 intentry CODE >323:/home/matthew/Projects/Ps2Plus/firmware/main.c
+EB intentry CODE >325:/home/matthew/Projects/Ps2Plus/firmware/main.c
+EC intentry CODE >344:/home/matthew/Projects/Ps2Plus/firmware/main.c
+117 intentry CODE >347:/home/matthew/Projects/Ps2Plus/firmware/main.c
+127 intentry CODE >350:/home/matthew/Projects/Ps2Plus/firmware/main.c
+12B intentry CODE >351:/home/matthew/Projects/Ps2Plus/firmware/main.c
+12D intentry CODE >354:/home/matthew/Projects/Ps2Plus/firmware/main.c
+130 intentry CODE >355:/home/matthew/Projects/Ps2Plus/firmware/main.c
+132 intentry CODE >357:/home/matthew/Projects/Ps2Plus/firmware/main.c
+136 intentry CODE >363:/home/matthew/Projects/Ps2Plus/firmware/main.c
+13E intentry CODE >366:/home/matthew/Projects/Ps2Plus/firmware/main.c
+143 intentry CODE >367:/home/matthew/Projects/Ps2Plus/firmware/main.c
+147 intentry CODE >371:/home/matthew/Projects/Ps2Plus/firmware/main.c
+148 intentry CODE >372:/home/matthew/Projects/Ps2Plus/firmware/main.c
+14C intentry CODE >373:/home/matthew/Projects/Ps2Plus/firmware/main.c
+14E intentry CODE >375:/home/matthew/Projects/Ps2Plus/firmware/main.c
+150 intentry CODE >380:/home/matthew/Projects/Ps2Plus/firmware/main.c
+5D6 text22 CODE >24:/home/matthew/Projects/Ps2Plus/firmware/main.c
+5D7 text22 CODE >26:/home/matthew/Projects/Ps2Plus/firmware/main.c
+5DC text22 CODE >28:/home/matthew/Projects/Ps2Plus/firmware/main.c
+5E4 text22 CODE >29:/home/matthew/Projects/Ps2Plus/firmware/main.c
+5EC text22 CODE >31:/home/matthew/Projects/Ps2Plus/firmware/main.c
+5F4 text22 CODE >32:/home/matthew/Projects/Ps2Plus/firmware/main.c
+5FC text22 CODE >33:/home/matthew/Projects/Ps2Plus/firmware/main.c
+604 text22 CODE >34:/home/matthew/Projects/Ps2Plus/firmware/main.c
+60C text22 CODE >36:/home/matthew/Projects/Ps2Plus/firmware/main.c
+60F text22 CODE >38:/home/matthew/Projects/Ps2Plus/firmware/main.c
+613 text22 CODE >40:/home/matthew/Projects/Ps2Plus/firmware/main.c
+61C text22 CODE >41:/home/matthew/Projects/Ps2Plus/firmware/main.c
+624 text22 CODE >42:/home/matthew/Projects/Ps2Plus/firmware/main.c
+62C text22 CODE >43:/home/matthew/Projects/Ps2Plus/firmware/main.c
+634 text22 CODE >44:/home/matthew/Projects/Ps2Plus/firmware/main.c
+63C text22 CODE >45:/home/matthew/Projects/Ps2Plus/firmware/main.c
+644 text22 CODE >46:/home/matthew/Projects/Ps2Plus/firmware/main.c
+64C text22 CODE >47:/home/matthew/Projects/Ps2Plus/firmware/main.c
+654 text22 CODE >48:/home/matthew/Projects/Ps2Plus/firmware/main.c
+65C text22 CODE >49:/home/matthew/Projects/Ps2Plus/firmware/main.c
+664 text22 CODE >50:/home/matthew/Projects/Ps2Plus/firmware/main.c
+66C text22 CODE >51:/home/matthew/Projects/Ps2Plus/firmware/main.c
+674 text22 CODE >55:/home/matthew/Projects/Ps2Plus/firmware/main.c
+F0D text21 CODE >27:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F0D text21 CODE >29:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F11 text20 CODE >37:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F11 text20 CODE >39:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F13 text20 CODE >40:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F15 text20 CODE >41:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F16 text19 CODE >32:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F17 text19 CODE >34:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F1A text19 CODE >35:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F2A text17 CODE >15:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F2A text17 CODE >16:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F2D text17 CODE >17:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F2E text17 CODE >18:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F2F text17 CODE >19:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F30 text17 CODE >20:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F32 text17 CODE >21:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F33 text17 CODE >22:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F1B text16 CODE >46:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F1B text16 CODE >48:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F1E text16 CODE >49:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F20 text16 CODE >50:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F21 text16 CODE >53:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F95 text15 CODE >3:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F97 text15 CODE >6:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F9B text15 CODE >8:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F9C text15 CODE >10:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F9E text15 CODE >11:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+F9F text15 CODE >13:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+FA1 text15 CODE >14:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+FA5 text15 CODE >16:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+FA9 text15 CODE >18:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+FAC text15 CODE >20:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+FAF text15 CODE >22:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+FB0 text15 CODE >24:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+FB5 text15 CODE >25:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+FD7 text14 CODE >165:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+FD7 text14 CODE >166:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+FDB text14 CODE >167:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+FDC text14 CODE >168:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+FDE text14 CODE >170:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+FDF text14 CODE >171:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+FE1 text14 CODE >173:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+FFF text14 CODE >174:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4A9 text13 CODE >12:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4AB text13 CODE >15:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4B0 text13 CODE >16:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4B6 text13 CODE >17:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4BC text13 CODE >18:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4C2 text13 CODE >19:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4C8 text13 CODE >20:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4CE text13 CODE >21:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4D4 text13 CODE >22:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4DA text13 CODE >24:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4E0 text13 CODE >25:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4E6 text13 CODE >26:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4EC text13 CODE >27:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4F2 text13 CODE >28:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4F8 text13 CODE >29:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4FE text13 CODE >30:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+504 text13 CODE >31:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+50A text13 CODE >41:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+50D text13 CODE >42:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+50E text13 CODE >46:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+515 text13 CODE >47:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+51E text13 CODE >48:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+51E text13 CODE >49:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+525 text13 CODE >50:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+52E text13 CODE >54:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+53A text13 CODE >55:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+53F text13 CODE >56:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+54B text13 CODE >58:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+54E text13 CODE >59:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+553 text13 CODE >63:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+55F text13 CODE >64:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+564 text13 CODE >65:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+570 text13 CODE >67:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+573 text13 CODE >68:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+578 text13 CODE >71:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+578 text13 CODE >74:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+580 text13 CODE >75:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+58D text13 CODE >77:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+590 text13 CODE >78:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+598 text13 CODE >81:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+598 text13 CODE >82:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+5A0 text13 CODE >83:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+5AD text13 CODE >85:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+5B0 text13 CODE >86:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+5B8 text13 CODE >89:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+5B8 text13 CODE >92:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+5C5 text13 CODE >93:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+5D1 text13 CODE >95:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+5D5 text13 CODE >96:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+363 text12 CODE >195:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+363 text12 CODE >198:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+364 text12 CODE >199:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+365 text12 CODE >201:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+372 text12 CODE >202:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+37E text12 CODE >203:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+38A text12 CODE >204:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+396 text12 CODE >206:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3A2 text12 CODE >207:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3AE text12 CODE >208:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3BA text12 CODE >209:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3C6 text12 CODE >237:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3C7 text12 CODE >241:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3CF text12 CODE >246:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3DB text12 CODE >247:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3E7 text12 CODE >249:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3F3 text12 CODE >250:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+3FF text12 CODE >253:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+403 text12 CODE >254:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+407 text12 CODE >255:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+407 text12 CODE >257:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+40B text12 CODE >258:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+40F text12 CODE >259:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+40F text12 CODE >261:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+413 text12 CODE >262:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+417 text12 CODE >263:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+417 text12 CODE >265:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+41B text12 CODE >266:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+41F text12 CODE >267:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+41F text12 CODE >271:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+423 text12 CODE >272:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+427 text12 CODE >273:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+427 text12 CODE >275:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+42B text12 CODE >276:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+42F text12 CODE >277:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+42F text12 CODE >279:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+433 text12 CODE >280:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+437 text12 CODE >281:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+437 text12 CODE >283:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+43B text12 CODE >284:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+43F text12 CODE >221:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+443 text12 CODE >224:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+44C text12 CODE >227:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+44D text12 CODE >228:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+451 text12 CODE >229:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+452 text12 CODE >230:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+456 text12 CODE >232:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+457 text12 CODE >233:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+45B text12 CODE >234:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+45C text12 CODE >235:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+460 text12 CODE >290:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+468 text12 CODE >291:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+471 text12 CODE >292:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+47A text12 CODE >293:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+483 text12 CODE >295:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+48C text12 CODE >296:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+495 text12 CODE >297:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+49E text12 CODE >298:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4A6 text12 CODE >300:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4A7 text12 CODE >301:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+4A8 text12 CODE >305:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+6DE text11 CODE >5:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6DE text11 CODE >13:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6E0 text11 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6E2 text11 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6E7 text11 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6E9 text11 CODE >18:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6EB text11 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6F0 text11 CODE >20:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6F4 text11 CODE >22:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6F6 text11 CODE >23:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6FA text11 CODE >24:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6FC text11 CODE >25:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+6FE text11 CODE >26:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+703 text11 CODE >27:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+707 text11 CODE >25:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+708 text11 CODE >30:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+70D text11 CODE >31:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+715 text11 CODE >32:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+719 text11 CODE >33:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+71A text11 CODE >35:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+71F text11 CODE >36:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+723 text11 CODE >38:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+726 text11 CODE >39:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+72B text11 CODE >40:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+72F text11 CODE >41:/opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+F5C text10 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+F5C text10 CODE >43:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+F5F text10 CODE >45:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+F61 text10 CODE >46:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+F65 text10 CODE >47:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+F6A text10 CODE >48:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+F6F text10 CODE >49:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+F73 text10 CODE >52:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+F77 text10 CODE >53:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+FB6 text9 CODE >98:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+FB6 text9 CODE >100:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+FD6 text9 CODE >101:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+7E7 text8 CODE >29:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+7E9 text8 CODE >33:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+7EB text8 CODE >34:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+7ED text8 CODE >35:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+7F1 text8 CODE >36:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+7F2 text8 CODE >38:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+7F7 text8 CODE >40:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+7F8 text8 CODE >42:/home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+188 text7 CODE >103:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+188 text7 CODE >105:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+190 text7 CODE >106:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+198 text7 CODE >107:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1A0 text7 CODE >108:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1A8 text7 CODE >110:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1B0 text7 CODE >111:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1B8 text7 CODE >112:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1C0 text7 CODE >113:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1C8 text7 CODE >115:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1CA text7 CODE >118:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1D6 text7 CODE >120:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1E2 text7 CODE >121:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1ED text7 CODE >122:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+1FE text7 CODE >126:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+22D text7 CODE >130:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+238 text7 CODE >131:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+244 text7 CODE >132:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+24F text7 CODE >133:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+260 text7 CODE >137:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+28F text7 CODE >141:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+29A text7 CODE >142:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+2A6 text7 CODE >143:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+2B1 text7 CODE >144:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+2C2 text7 CODE >148:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+2F1 text7 CODE >152:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+2FC text7 CODE >153:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+308 text7 CODE >154:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+313 text7 CODE >155:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+324 text7 CODE >159:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+353 text7 CODE >162:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+F22 text6 CODE >9:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F22 text6 CODE >10:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F25 text6 CODE >11:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F27 text6 CODE >12:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F29 text6 CODE >13:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7F9 text5 CODE >3:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7F9 text5 CODE >4:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7FC text5 CODE >5:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7FE text5 CODE >6:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7FF text5 CODE >7:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+F4C text4 CODE >10:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F4E text4 CODE >13:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F50 text4 CODE >15:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F52 text4 CODE >20:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F56 text4 CODE >24:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+F5B text4 CODE >25:/home/matthew/Projects/Ps2Plus/firmware/Spi.c
+776 text3 CODE >26:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+776 text3 CODE >29:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+779 text3 CODE >30:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+77B text3 CODE >31:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+77D text3 CODE >32:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+77F text3 CODE >33:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+781 text3 CODE >36:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+783 text3 CODE >37:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+784 text3 CODE >38:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+786 text3 CODE >39:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+787 text3 CODE >40:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+788 text3 CODE >43:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+78A text3 CODE >44:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+78C text3 CODE >45:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+78E text3 CODE >46:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+790 text3 CODE >47:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+791 text3 CODE >50:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+79F text3 CODE >52:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7A1 text3 CODE >53:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7A2 text3 CODE >54:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7A5 text3 CODE >56:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7A8 text3 CODE >58:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7AA text3 CODE >61:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7AB text3 CODE >62:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7AC text3 CODE >63:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7AE text3 CODE >64:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7AF text3 CODE >65:/home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+7B0 text2 CODE >176:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+7B2 text2 CODE >177:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+7C5 text2 CODE >178:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+7D8 text2 CODE >179:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+7E5 text2 CODE >181:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+7E6 text2 CODE >182:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+675 text1 CODE >184:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+675 text1 CODE >186:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+690 text1 CODE >187:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+6AA text1 CODE >189:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+6C4 text1 CODE >190:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+6DD text1 CODE >193:/home/matthew/Projects/Ps2Plus/firmware/Controller.c
+730 maintext CODE >384:/home/matthew/Projects/Ps2Plus/firmware/main.c
+730 maintext CODE >386:/home/matthew/Projects/Ps2Plus/firmware/main.c
+733 maintext CODE >387:/home/matthew/Projects/Ps2Plus/firmware/main.c
+736 maintext CODE >388:/home/matthew/Projects/Ps2Plus/firmware/main.c
+739 maintext CODE >390:/home/matthew/Projects/Ps2Plus/firmware/main.c
+73E maintext CODE >393:/home/matthew/Projects/Ps2Plus/firmware/main.c
+73F maintext CODE >394:/home/matthew/Projects/Ps2Plus/firmware/main.c
+740 maintext CODE >395:/home/matthew/Projects/Ps2Plus/firmware/main.c
+741 maintext CODE >402:/home/matthew/Projects/Ps2Plus/firmware/main.c
+74A maintext CODE >405:/home/matthew/Projects/Ps2Plus/firmware/main.c
+74D maintext CODE >409:/home/matthew/Projects/Ps2Plus/firmware/main.c
+752 maintext CODE >411:/home/matthew/Projects/Ps2Plus/firmware/main.c
+755 maintext CODE >412:/home/matthew/Projects/Ps2Plus/firmware/main.c
+759 maintext CODE >413:/home/matthew/Projects/Ps2Plus/firmware/main.c
+759 maintext CODE >415:/home/matthew/Projects/Ps2Plus/firmware/main.c
+75C maintext CODE >416:/home/matthew/Projects/Ps2Plus/firmware/main.c
+75D maintext CODE >419:/home/matthew/Projects/Ps2Plus/firmware/main.c
+761 maintext CODE >421:/home/matthew/Projects/Ps2Plus/firmware/main.c
+765 maintext CODE >423:/home/matthew/Projects/Ps2Plus/firmware/main.c
+766 maintext CODE >424:/home/matthew/Projects/Ps2Plus/firmware/main.c
+76A maintext CODE >425:/home/matthew/Projects/Ps2Plus/firmware/main.c
+76D maintext CODE >426:/home/matthew/Projects/Ps2Plus/firmware/main.c
+76E maintext CODE >430:/home/matthew/Projects/Ps2Plus/firmware/main.c
+772 maintext CODE >432:/home/matthew/Projects/Ps2Plus/firmware/main.c
+F34 clrtext CODE >7128:/tmp/xcX03OTL5
+F34 clrtext CODE >7129:/tmp/xcX03OTL5
+F35 clrtext CODE >7130:/tmp/xcX03OTL5
+F35 clrtext CODE >7131:/tmp/xcX03OTL5
+F36 clrtext CODE >7132:/tmp/xcX03OTL5
+F37 clrtext CODE >7133:/tmp/xcX03OTL5
+F38 clrtext CODE >7134:/tmp/xcX03OTL5
+F39 clrtext CODE >7135:/tmp/xcX03OTL5
+F3A clrtext CODE >7136:/tmp/xcX03OTL5
+F3B clrtext CODE >7137:/tmp/xcX03OTL5
+F3C clrtext CODE >7138:/tmp/xcX03OTL5
+F3D clrtext CODE >7139:/tmp/xcX03OTL5
+F3E clrtext CODE >7141:/tmp/xcX03OTL5
+F3F clrtext CODE >7140:/tmp/xcX03OTL5
+F40 inittext CODE >7087:/tmp/xcX03OTL5
+F40 inittext CODE >7088:/tmp/xcX03OTL5
+F41 inittext CODE >7089:/tmp/xcX03OTL5
+F41 inittext CODE >7090:/tmp/xcX03OTL5
+F42 inittext CODE >7091:/tmp/xcX03OTL5
+F43 inittext CODE >7092:/tmp/xcX03OTL5
+F44 inittext CODE >7093:/tmp/xcX03OTL5
+F45 inittext CODE >7094:/tmp/xcX03OTL5
+F46 inittext CODE >7095:/tmp/xcX03OTL5
+F47 inittext CODE >7096:/tmp/xcX03OTL5
+F48 inittext CODE >7097:/tmp/xcX03OTL5
+F49 inittext CODE >7098:/tmp/xcX03OTL5
+F4A inittext CODE >7100:/tmp/xcX03OTL5
+F4B inittext CODE >7099:/tmp/xcX03OTL5
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -497,57 +654,64 @@ EC intentry CODE >343:/home/matthew/Projects/Ps2Plus/firmware/main.c
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_analogStateSecond 30 0 BANK0 1 bssBANK0 dist/default/production/firmware.production.o
+_analogStateSecond D0 0 BANK1 1 bssBANK1 dist/default/production/firmware.production.o
 ___latbits 3 0 ABS 0 - dist/default/production/firmware.production.o
+___awdiv@counter 2B 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
 __Hspace_0 800C 0 ABS 0 - -
-__Hspace_1 C0 0 ABS 0 - -
+__Hspace_1 E0 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
-spiInit@sTransmitEdge 60 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
-__end_of_readADC 87C 0 CODE 0 text3 dist/default/production/firmware.production.o
+spiInit@sTransmitEdge 22 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+__end_of_readADC 2000 0 CODE 0 text14 dist/default/production/firmware.production.o
 _SSP1STATbits 18F 0 ABS 0 - dist/default/production/firmware.production.o
 __size_of_pollController 0 0 ABS 0 - dist/default/production/firmware.production.o
-_PWM6DCH 38D 0 ABS 0 - dist/default/production/firmware.production.o
-_PWM6DCL 38C 0 ABS 0 - dist/default/production/firmware.production.o
-_PWM7DCH 391 0 ABS 0 - dist/default/production/firmware.production.o
-_PWM7DCL 390 0 ABS 0 - dist/default/production/firmware.production.o
 _analogMode 78 0 COMMON 1 dataCOMMON dist/default/production/firmware.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
+eepromWrite@address 21 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 _cmdCounter 76 0 COMMON 1 bssCOMMON dist/default/production/firmware.production.o
 __Hstrings 0 0 ABS 0 strings -
 __CFG_WDTCCS$SC 0 0 ABS 0 - dist/default/production/firmware.production.o
+Map@x 2F 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 _WPUA F39 0 ABS 0 - dist/default/production/firmware.production.o
 _WPUB F44 0 ABS 0 - dist/default/production/firmware.production.o
 _WPUC F4F 0 ABS 0 - dist/default/production/firmware.production.o
 _WPUD F5A 0 ABS 0 - dist/default/production/firmware.production.o
 _WPUE F65 0 ABS 0 - dist/default/production/firmware.production.o
-___sp 0 0 STACK 2 stack /tmp/xcXtHtW6H.o
-_main 6C8 0 CODE 0 maintext dist/default/production/firmware.production.o
+___sp 0 0 STACK 2 stack /tmp/xcXcEgBsg.o
+_main E60 0 CODE 0 maintext dist/default/production/firmware.production.o
 btemp 7E 0 ABS 0 - dist/default/production/firmware.production.o
-start 2A4 0 CODE 0 init /tmp/xcXtHtW6H.o
+start 2A4 0 CODE 0 init /tmp/xcXcEgBsg.o
+__size_of___awdiv 0 0 ABS 0 - dist/default/production/firmware.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production/firmware.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __CFG_SCANE$available 0 0 ABS 0 - dist/default/production/firmware.production.o
+eepromRead@data 22 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+?___wmul 20 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+__size_of_eepromRead 0 0 ABS 0 - dist/default/production/firmware.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
-readADC@channel 5E 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+readADC@channel 20 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 __size_of_readController 0 0 ABS 0 - dist/default/production/firmware.production.o
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
 _previousCmd 75 0 COMMON 1 bssCOMMON dist/default/production/firmware.production.o
-intlevel0 0 0 ENTRY 0 functab /tmp/xcXtHtW6H.o
-intlevel1 0 0 ENTRY 0 functab /tmp/xcXtHtW6H.o
-intlevel2 0 0 ENTRY 0 functab /tmp/xcXtHtW6H.o
-intlevel3 0 0 ENTRY 0 functab /tmp/xcXtHtW6H.o
-intlevel4 0 0 ENTRY 0 functab /tmp/xcXtHtW6H.o
-intlevel5 0 0 ENTRY 0 functab /tmp/xcXtHtW6H.o
+intlevel0 0 0 ENTRY 0 functab /tmp/xcXcEgBsg.o
+intlevel1 0 0 ENTRY 0 functab /tmp/xcXcEgBsg.o
+intlevel2 0 0 ENTRY 0 functab /tmp/xcXcEgBsg.o
+intlevel3 0 0 ENTRY 0 functab /tmp/xcXcEgBsg.o
+intlevel4 0 0 ENTRY 0 functab /tmp/xcXcEgBsg.o
+intlevel5 0 0 ENTRY 0 functab /tmp/xcXcEgBsg.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production/firmware.production.o
-__end_of_reversebyte 82A 0 CODE 0 text2 dist/default/production/firmware.production.o
+__end_of_reversebyte FCE 0 CODE 0 text2 dist/default/production/firmware.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+___awdiv@sign 2C 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__pidataCOMMON 93A 0 CODE 0 idataCOMMON dist/default/production/firmware.production.o
+__pidataCOMMON 4 0 CODE 0 idataCOMMON dist/default/production/firmware.production.o
+__size_of_lutInit 0 0 ABS 0 - dist/default/production/firmware.production.o
+__end_of_nvmUnlock 1E44 0 CODE 0 text16 dist/default/production/firmware.production.o
+___wmul@multiplicand 22 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 _ADCON0 93 0 ABS 0 - dist/default/production/firmware.production.o
 _ADCON1 94 0 ABS 0 - dist/default/production/firmware.production.o
 _ADCON2 95 0 ABS 0 - dist/default/production/firmware.production.o
@@ -558,44 +722,63 @@ _ANSELB F43 0 ABS 0 - dist/default/production/firmware.production.o
 _ANSELC F4E 0 ABS 0 - dist/default/production/firmware.production.o
 _ANSELD F59 0 ABS 0 - dist/default/production/firmware.production.o
 _ANSELE F64 0 ABS 0 - dist/default/production/firmware.production.o
+__size_of_nvmUnlock 0 0 ABS 0 - dist/default/production/firmware.production.o
+___awdiv@dividend 28 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 __LdataCOMMON 0 0 ABS 0 dataCOMMON -
+Map@outMax 37 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+Map@outMin 35 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 __size_of_PS2Command 0 0 ABS 0 - dist/default/production/firmware.production.o
+eepromWrite@data 20 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+__end_of___wmul 1EF0 0 CODE 0 text10 dist/default/production/firmware.production.o
 __size_of_spiInit 0 0 ABS 0 - dist/default/production/firmware.production.o
 __size_of_spiRead 0 0 ABS 0 - dist/default/production/firmware.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __size_of_readControllerAnalog 0 0 ABS 0 - dist/default/production/firmware.production.o
-_PWM7CONbits 392 0 ABS 0 - dist/default/production/firmware.production.o
-_responseLength 42 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
+_nvmUnlock 1E36 0 CODE 0 text16 dist/default/production/firmware.production.o
+___awdiv@divisor 26 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+_responseLength 50 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
+__end_of___awdiv E60 0 CODE 0 text11 dist/default/production/firmware.production.o
 __CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
-main@slaveSelect 6B 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
-_adcInit 8D4 0 CODE 0 text10 dist/default/production/firmware.production.o
+main@slaveSelect 4F 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+_adcInit 1E54 0 CODE 0 text17 dist/default/production/firmware.production.o
 __size_of_picInit 0 0 ABS 0 - dist/default/production/firmware.production.o
-___stackhi 27EF 0 ABS 0 - /tmp/xcXtHtW6H.o
-___stacklo 2070 0 ABS 0 - /tmp/xcXtHtW6H.o
-__end_of_readControllerAnalog 6C8 0 CODE 0 text1 dist/default/production/firmware.production.o
+___stackhi 23EF 0 ABS 0 - /tmp/xcXcEgBsg.o
+___stacklo 2090 0 ABS 0 - /tmp/xcXcEgBsg.o
+eepromRead@address 21 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+__end_of_readControllerAnalog DBC 0 CODE 0 text1 dist/default/production/firmware.production.o
+_eepromWrite 1F2A 0 CODE 0 text15 dist/default/production/firmware.production.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
-_digitalStateFirst 79 0 COMMON 1 dataCOMMON dist/default/production/firmware.production.o
+_digitalStateFirst 58 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
 __CFG_PPS1WAY$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
 __CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
-spiInit@sDataSample 5E 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+spiInit@sDataSample 20 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+lutInit@lxMax 43 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+lutInit@lxMin 42 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+lutInit@lyMax 45 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+lutInit@lyMin 44 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+lutInit@rxMax 47 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+lutInit@rxMin 46 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+lutInit@ryMax 49 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+lutInit@ryMin 48 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 start_initialization 2A8 0 CODE 0 cinit dist/default/production/firmware.production.o
-_PWM6CONbits 38E 0 ABS 0 - dist/default/production/firmware.production.o
+configureController@lx 32 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+configureController@ly 33 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+configureController@rx 34 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+configureController@ry 35 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 __CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/default/production/firmware.production.o
 _TRISAbits 11 0 ABS 0 - dist/default/production/firmware.production.o
 _TRISCbits 13 0 ABS 0 - dist/default/production/firmware.production.o
-_TRISDbits 14 0 ABS 0 - dist/default/production/firmware.production.o
 __size_of_ppsLock 0 0 ABS 0 - dist/default/production/firmware.production.o
-_RC3PPS F23 0 ABS 0 - dist/default/production/firmware.production.o
 _RC5PPS F25 0 ABS 0 - dist/default/production/firmware.production.o
-_RD1PPS F29 0 ABS 0 - dist/default/production/firmware.production.o
-clear_ram0 912 0 CODE 0 clrtext dist/default/production/firmware.production.o
-__pcstackBANK0 5E 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+clear_ram0 1E68 0 CODE 0 clrtext dist/default/production/firmware.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 _SSP1IE 38C8 0 ABS 0 - dist/default/production/firmware.production.o
 _SSP1IF 3878 0 ABS 0 - dist/default/production/firmware.production.o
-__end_of_ppsUnlock 906 0 CODE 0 text7 dist/default/production/firmware.production.o
+__end_of_ppsUnlock 1000 0 CODE 0 text5 dist/default/production/firmware.production.o
+__end_of_lutInit 6C6 0 CODE 0 text7 dist/default/production/firmware.production.o
 __size_of_ppsUnlock 0 0 ABS 0 - dist/default/production/firmware.production.o
-_readADC 82A 0 CODE 0 text3 dist/default/production/firmware.production.o
-___int_sp 0 0 STACK 2 stack /tmp/xcXtHtW6H.o
+_readADC 1FAE 0 CODE 0 text14 dist/default/production/firmware.production.o
+___int_sp 0 0 STACK 2 stack /tmp/xcXcEgBsg.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -606,7 +789,7 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
-__Hcinit 2FC 0 CODE 0 cinit -
+__Hcinit 310 0 CODE 0 cinit -
 __size_of_spiReceiveWait 0 0 ABS 0 - dist/default/production/firmware.production.o
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hsfr10 0 0 ABS 0 sfr10 -
@@ -632,6 +815,10 @@ __Hsfr29 0 0 ABS 0 sfr29 -
 __Hsfr30 0 0 ABS 0 sfr30 -
 __Hsfr31 0 0 ABS 0 sfr31 -
 __Hstack 0 0 STACK 2 stack -
+_NVMADRH 81B 0 ABS 0 - dist/default/production/firmware.production.o
+_NVMADRL 81A 0 ABS 0 - dist/default/production/firmware.production.o
+_NVMCON2 81F 0 ABS 0 - dist/default/production/firmware.production.o
+_NVMDATL 81C 0 ABS 0 - dist/default/production/firmware.production.o
 __Hbank10 0 0 ABS 0 bank10 -
 __Hbank11 0 0 ABS 0 bank11 -
 __Hbank12 0 0 ABS 0 bank12 -
@@ -656,11 +843,11 @@ __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
-_ppsUnlock 8F8 0 CODE 0 text7 dist/default/production/firmware.production.o
+_ppsUnlock FF2 0 CODE 0 text5 dist/default/production/firmware.production.o
 __size_of_configureController 0 0 ABS 0 - dist/default/production/firmware.production.o
 __size_of_reversebyte 0 0 ABS 0 - dist/default/production/firmware.production.o
-__end_of_spiInit 8D4 0 CODE 0 text6 dist/default/production/firmware.production.o
-__end_of_spiRead 932 0 CODE 0 text13 dist/default/production/firmware.production.o
+__end_of_spiInit 1EB8 0 CODE 0 text4 dist/default/production/firmware.production.o
+__end_of_spiRead 1E2C 0 CODE 0 text20 dist/default/production/firmware.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10018 0 CONFIG 0 config -
 __Lbank0 0 0 ABS 0 bank0 -
@@ -698,8 +885,8 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-init_ram 906 0 CODE 0 inittext dist/default/production/firmware.production.o
-__end_of_picInit 7BC 0 CODE 0 text5 dist/default/production/firmware.production.o
+init_ram 1E80 0 CODE 0 inittext dist/default/production/firmware.production.o
+__end_of_picInit F60 0 CODE 0 text3 dist/default/production/firmware.production.o
 __Linittext 0 0 ABS 0 inittext -
 _INTCONbits B 0 ABS 0 - dist/default/production/firmware.production.o
 __Habs1 0 0 ABS 0 abs1 -
@@ -732,12 +919,13 @@ __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
 _SSP1CON1 190 0 ABS 0 - dist/default/production/firmware.production.o
 _SSP1STAT 18F 0 ABS 0 - dist/default/production/firmware.production.o
-_pollController 50A 0 CODE 0 text15 dist/default/production/firmware.production.o
+_pollController BAC 0 CODE 0 text22 dist/default/production/firmware.production.o
+___wmul 1EB8 0 CODE 0 text10 dist/default/production/firmware.production.o
 __CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/default/production/firmware.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 int$flags 7E 0 ABS 0 - dist/default/production/firmware.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_PR2 28D 0 ABS 0 - dist/default/production/firmware.production.o
+_Map 1F6C 0 CODE 0 text9 dist/default/production/firmware.production.o
 _RA0 60 0 ABS 0 - dist/default/production/firmware.production.o
 _RA1 61 0 ABS 0 - dist/default/production/firmware.production.o
 _RA2 62 0 ABS 0 - dist/default/production/firmware.production.o
@@ -758,34 +946,45 @@ _RC2 72 0 ABS 0 - dist/default/production/firmware.production.o
 _RD0 78 0 ABS 0 - dist/default/production/firmware.production.o
 _RD4 7C 0 ABS 0 - dist/default/production/firmware.production.o
 __S0 800C 0 ABS 0 - -
-__S1 C0 0 ABS 0 - -
+__S1 E0 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 _PreviousDigitalByte1 B8 0 BANK1 1 bssBANK1 dist/default/production/firmware.production.o
 _PreviousDigitalByte2 B0 0 BANK1 1 bssBANK1 dist/default/production/firmware.production.o
-?_readADC 5E 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
-__end_of_ppsLock 8F8 0 CODE 0 text8 dist/default/production/firmware.production.o
+lutInit@position 4A 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+?_readADC 20 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+__end_of_ppsLock 1E54 0 CODE 0 text6 dist/default/production/firmware.production.o
 __HidataCOMMON 0 0 ABS 0 idataCOMMON -
-_configureController 93E 0 CODE 0 text9 dist/default/production/firmware.production.o
+_configureController 6C6 0 CODE 0 text12 dist/default/production/firmware.production.o
 _IndexDigitalByte1 A8 0 BANK1 1 bssBANK1 dist/default/production/firmware.production.o
 _IndexDigitalByte2 A0 0 BANK1 1 bssBANK1 dist/default/production/firmware.production.o
+__end_of_Map 1FAE 0 CODE 0 text9 dist/default/production/firmware.production.o
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/firmware.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXtHtW6H.o
-_readController 2FC 0 CODE 0 text4 dist/default/production/firmware.production.o
-__pdataBANK0 42 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXcEgBsg.o
+_readController 952 0 CODE 0 text13 dist/default/production/firmware.production.o
+__pdataBANK0 50 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production/firmware.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production/firmware.production.o
-__end_of_pollController 646 0 CODE 0 text15 dist/default/production/firmware.production.o
-_lxData 46 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
-_lyData 45 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
-reversebyte@byte 61 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
-__ptext10 8D4 0 CODE 0 text10 dist/default/production/firmware.production.o
-__ptext12 91E 0 CODE 0 text12 dist/default/production/firmware.production.o
-__ptext13 928 0 CODE 0 text13 dist/default/production/firmware.production.o
-__ptext14 932 0 CODE 0 text14 dist/default/production/firmware.production.o
-__ptext15 50A 0 CODE 0 text15 dist/default/production/firmware.production.o
+__end_of_pollController CEA 0 CODE 0 text22 dist/default/production/firmware.production.o
+_lxData 55 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
+_lyData 54 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
+reversebyte@byte 23 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+__ptext10 1EB8 0 CODE 0 text10 dist/default/production/firmware.production.o
+__ptext11 DBC 0 CODE 0 text11 dist/default/production/firmware.production.o
+__ptext12 6C6 0 CODE 0 text12 dist/default/production/firmware.production.o
+__ptext13 952 0 CODE 0 text13 dist/default/production/firmware.production.o
+__ptext14 1FAE 0 CODE 0 text14 dist/default/production/firmware.production.o
+__ptext15 1F2A 0 CODE 0 text15 dist/default/production/firmware.production.o
+__ptext16 1E36 0 CODE 0 text16 dist/default/production/firmware.production.o
+__ptext17 1E54 0 CODE 0 text17 dist/default/production/firmware.production.o
+__ptext19 1E2C 0 CODE 0 text19 dist/default/production/firmware.production.o
+__ptext20 1E22 0 CODE 0 text20 dist/default/production/firmware.production.o
+__ptext21 1E1A 0 CODE 0 text21 dist/default/production/firmware.production.o
+__ptext22 BAC 0 CODE 0 text22 dist/default/production/firmware.production.o
+___awdiv DBC 0 CODE 0 text11 dist/default/production/firmware.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -808,21 +1007,25 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 6C8 0 CODE 0 maintext dist/default/production/firmware.production.o
+__pmaintext E60 0 CODE 0 maintext dist/default/production/firmware.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production/firmware.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
-_DigitalControllerByte1 28 0 BANK0 1 bssBANK0 dist/default/production/firmware.production.o
-_DigitalControllerByte2 20 0 BANK0 1 bssBANK0 dist/default/production/firmware.production.o
+_DigitalControllerByte1 C8 0 BANK1 1 bssBANK1 dist/default/production/firmware.production.o
+_DigitalControllerByte2 C0 0 BANK1 1 bssBANK1 dist/default/production/firmware.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
 __Hinittext 0 0 ABS 0 inittext -
-_rxData 48 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
-_ryData 47 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
-main@count 6A 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
-__end_of_readController 50A 0 CODE 0 text4 dist/default/production/firmware.production.o
+___wmul@multiplier 20 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+_eepromRead FCE 0 CODE 0 text8 dist/default/production/firmware.production.o
+_rxData 79 0 COMMON 1 dataCOMMON dist/default/production/firmware.production.o
+_ryData 56 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
+main@count 4E 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+__end_of_readController BAC 0 CODE 0 text13 dist/default/production/firmware.production.o
+__end_of_eepromWrite 1F6C 0 CODE 0 text15 dist/default/production/firmware.production.o
 _ADCON0bits 93 0 ABS 0 - dist/default/production/firmware.production.o
+__pbssBIGRAM 23F0 0 ABS 0 - dist/default/production/firmware.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -831,65 +1034,81 @@ __pbssCOMMON 75 0 COMMON 1 bssCOMMON dist/default/production/firmware.production
 __CFG_LPBOREN$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
 pollController@response 71 0 COMMON 1 cstackCOMMON dist/default/production/firmware.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
-_readControllerAnalog 646 0 CODE 0 text1 dist/default/production/firmware.production.o
+_readControllerAnalog CEA 0 CODE 0 text1 dist/default/production/firmware.production.o
 __size_of_adcInit 0 0 ABS 0 - dist/default/production/firmware.production.o
 __Lend_init 2A4 0 CODE 0 end_init -
 __CFG_LVP$ON 0 0 ABS 0 - dist/default/production/firmware.production.o
 __CFG_CSWEN$ON 0 0 ABS 0 - dist/default/production/firmware.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-main@slaveSelectStatePrev 69 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+main@slaveSelectStatePrev 4D 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+eepromWrite@interruptStatus 22 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 __CFG_ZCD$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
-__end_of_configureController 940 0 CODE 0 text9 dist/default/production/firmware.production.o
-end_of_initialization 2F4 0 CODE 0 cinit dist/default/production/firmware.production.o
+__end_of_configureController 952 0 CODE 0 text12 dist/default/production/firmware.production.o
+end_of_initialization 308 0 CODE 0 cinit dist/default/production/firmware.production.o
+_lutInit 310 0 CODE 0 text7 dist/default/production/firmware.production.o
 __Hintentry 2A4 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production/firmware.production.o
 __CFG_RSTOSC$HFINT32 0 0 ABS 0 - dist/default/production/firmware.production.o
 __Lstrings 0 0 ABS 0 strings -
-_reversebyte 7BC 0 CODE 0 text2 dist/default/production/firmware.production.o
+___awdiv@quotient 2D 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+?___awdiv 26 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+_reversebyte F60 0 CODE 0 text2 dist/default/production/firmware.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 _PS2Command 8 0 CODE 0 intentry dist/default/production/firmware.production.o
-__ptext1 646 0 CODE 0 text1 dist/default/production/firmware.production.o
-__ptext2 7BC 0 CODE 0 text2 dist/default/production/firmware.production.o
-__ptext3 82A 0 CODE 0 text3 dist/default/production/firmware.production.o
-__ptext4 2FC 0 CODE 0 text4 dist/default/production/firmware.production.o
-__ptext5 748 0 CODE 0 text5 dist/default/production/firmware.production.o
-__ptext6 8B4 0 CODE 0 text6 dist/default/production/firmware.production.o
-__ptext7 8F8 0 CODE 0 text7 dist/default/production/firmware.production.o
-__ptext8 8E8 0 CODE 0 text8 dist/default/production/firmware.production.o
-__ptext9 93E 0 CODE 0 text9 dist/default/production/firmware.production.o
-_spiInit 8B4 0 CODE 0 text6 dist/default/production/firmware.production.o
-_spiRead 928 0 CODE 0 text13 dist/default/production/firmware.production.o
+__ptext1 CEA 0 CODE 0 text1 dist/default/production/firmware.production.o
+__ptext2 F60 0 CODE 0 text2 dist/default/production/firmware.production.o
+__ptext3 EEC 0 CODE 0 text3 dist/default/production/firmware.production.o
+__ptext4 1E98 0 CODE 0 text4 dist/default/production/firmware.production.o
+__ptext5 FF2 0 CODE 0 text5 dist/default/production/firmware.production.o
+__ptext6 1E44 0 CODE 0 text6 dist/default/production/firmware.production.o
+__ptext7 310 0 CODE 0 text7 dist/default/production/firmware.production.o
+__ptext8 FCE 0 CODE 0 text8 dist/default/production/firmware.production.o
+__ptext9 1F6C 0 CODE 0 text9 dist/default/production/firmware.production.o
+__end_of_eepromRead FF2 0 CODE 0 text8 dist/default/production/firmware.production.o
+_spiInit 1E98 0 CODE 0 text4 dist/default/production/firmware.production.o
+_spiRead 1E22 0 CODE 0 text20 dist/default/production/firmware.production.o
+Map@inMax 33 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+Map@inMin 31 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 spiWrite@dat 70 0 COMMON 1 cstackCOMMON dist/default/production/firmware.production.o
 __Lpowerup 0 0 CODE 0 powerup -
-spiInit@sType 61 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+spiInit@sType 23 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_picInit 748 0 CODE 0 text5 dist/default/production/firmware.production.o
-_response 4A 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
+_picInit EEC 0 CODE 0 text3 dist/default/production/firmware.production.o
+_response 59 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
 __size_of_readADC 0 0 ABS 0 - dist/default/production/firmware.production.o
-__end_of__initialization 2F4 0 CODE 0 cinit dist/default/production/firmware.production.o
+__end_of__initialization 308 0 CODE 0 cinit dist/default/production/firmware.production.o
 __size_of_spiWrite 0 0 ABS 0 - dist/default/production/firmware.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 87C 0 CODE 0 idataBANK0 dist/default/production/firmware.production.o
-_spiReceiveWait 932 0 CODE 0 text14 dist/default/production/firmware.production.o
+_NVMCON1bits 81E 0 ABS 0 - dist/default/production/firmware.production.o
+__pidataBANK0 1EF0 0 CODE 0 idataBANK0 dist/default/production/firmware.production.o
+_spiReceiveWait 1E1A 0 CODE 0 text21 dist/default/production/firmware.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/firmware.production.o
-_ppsLock 8E8 0 CODE 0 text8 dist/default/production/firmware.production.o
+_ppsLock 1E44 0 CODE 0 text6 dist/default/production/firmware.production.o
 _SSP1BUF 18C 0 ABS 0 - dist/default/production/firmware.production.o
 __Hend_init 2A8 0 CODE 0 end_init -
-__end_of_adcInit 8E8 0 CODE 0 text10 dist/default/production/firmware.production.o
+__end_of_adcInit 1E68 0 CODE 0 text17 dist/default/production/firmware.production.o
 PS2Command@cmd 74 0 COMMON 1 cstackCOMMON dist/default/production/firmware.production.o
 __end_of_PS2Command 2A4 0 CODE 0 intentry dist/default/production/firmware.production.o
-__end_of_main 748 0 CODE 0 maintext dist/default/production/firmware.production.o
-_escapeMode 40 0 BANK0 1 bssBANK0 dist/default/production/firmware.production.o
+__end_of_main EEC 0 CODE 0 maintext dist/default/production/firmware.production.o
+_escapeMode 6D 0 BANK0 1 bssBANK0 dist/default/production/firmware.production.o
+configureController@lxMax 2B 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+configureController@lxMin 2A 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+configureController@lyMax 2D 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+configureController@lyMin 2C 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 _ADACQ 9D 0 ABS 0 - dist/default/production/firmware.production.o
 _ADCLK 98 0 ABS 0 - dist/default/production/firmware.production.o
 _ADPCH 9E 0 ABS 0 - dist/default/production/firmware.production.o
 _ADPRE 9C 0 ABS 0 - dist/default/production/firmware.production.o
 _ADREF 9A 0 ABS 0 - dist/default/production/firmware.production.o
+configureController@rxMax 2F 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+configureController@rxMin 2E 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+configureController@ryMax 31 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+configureController@ryMin 30 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 _TRISA 11 0 ABS 0 - dist/default/production/firmware.production.o
 _TRISB 12 0 ABS 0 - dist/default/production/firmware.production.o
 _TRISC 13 0 ABS 0 - dist/default/production/firmware.production.o
@@ -898,24 +1117,30 @@ _TRISE 15 0 ABS 0 - dist/default/production/firmware.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 _index 77 0 COMMON 1 bssCOMMON dist/default/production/firmware.production.o
+_lutLX 26F0 0 ABS 1 - dist/default/production/firmware.production.o
+_lutLY 25F0 0 ABS 1 - dist/default/production/firmware.production.o
+_lutRX 24F0 0 ABS 1 - dist/default/production/firmware.production.o
+_lutRY 23F0 0 ABS 1 - dist/default/production/firmware.production.o
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
-_digitalStateSecond 49 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
+_digitalStateSecond 57 0 BANK0 1 dataBANK0 dist/default/production/firmware.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production/firmware.production.o
-readController@analogMode 60 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+readController@analogMode 22 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+__size_of_Map 0 0 ABS 0 - dist/default/production/firmware.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
-spiInit@sClockIdle 5F 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+spiInit@sClockIdle 21 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
 __initialization 2A8 0 CODE 0 cinit dist/default/production/firmware.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
-__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production/firmware.production.o
+__size_of_eepromWrite 0 0 ABS 0 - dist/default/production/firmware.production.o
+__pbssBANK0 6D 0 BANK0 1 bssBANK0 dist/default/production/firmware.production.o
 __pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production/firmware.production.o
 __pdataCOMMON 78 0 COMMON 1 dataCOMMON dist/default/production/firmware.production.o
-_spiWrite 91E 0 CODE 0 text12 dist/default/production/firmware.production.o
-_T2CONbits 28E 0 ABS 0 - dist/default/production/firmware.production.o
+_spiWrite 1E2C 0 CODE 0 text19 dist/default/production/firmware.production.o
 _PPSLOCK E8F 0 ABS 0 - dist/default/production/firmware.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/firmware.production.o
-__end_of_spiReceiveWait 93A 0 CODE 0 text14 dist/default/production/firmware.production.o
-__end_of_spiWrite 928 0 CODE 0 text12 dist/default/production/firmware.production.o
-_analogStateFirst 38 0 BANK0 1 bssBANK0 dist/default/production/firmware.production.o
+___wmul@product 24 0 BANK0 1 cstackBANK0 dist/default/production/firmware.production.o
+__end_of_spiReceiveWait 1E22 0 CODE 0 text21 dist/default/production/firmware.production.o
+__end_of_spiWrite 1E36 0 CODE 0 text19 dist/default/production/firmware.production.o
+_analogStateFirst D8 0 BANK1 1 bssBANK1 dist/default/production/firmware.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -932,6 +1157,26 @@ _analogStateFirst 38 0 BANK0 1 bssBANK0 dist/default/production/firmware.product
 # otherwise name will be "-".  The <space> number is in decimal.
 # <address> and <size> are in byte units as unqaulified hexadecimal
 %DABS
+_lutLX 1 26F0 0
+_lutLY 1 25F0 0
+_lutRX 1 24F0 0
+_lutRY 1 23F0 0
+- 1 CA0 20
+- 1 C20 50
+- 1 BA0 50
+- 1 B30 40
+- 1 B20 10
+- 1 AA0 50
+- 1 A20 50
+- 1 9A0 50
+- 1 920 50
+- 1 8A0 50
+- 1 820 50
+- 1 7E0 10
+- 1 7A0 40
+- 1 720 50
+- 1 6A0 50
+- 1 650 20
 - 1 7E 2
 # %SEGMENTS Section
 # This sections enumerates the segments of the program.  Each segment
@@ -941,9 +1186,23 @@ _analogStateFirst 38 0 BANK0 1 bssBANK0 dist/default/production/firmware.product
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
+text4 0 F4C 1E98 10 2
+text6 0 F22 1E44 8 2
+text9 0 FB6 1F6C 21 2
+text10 0 F5C 1EB8 1C 2
+text14 0 FD7 1FAE 29 2
+text15 0 F95 1F2A 21 2
+text16 0 F1B 1E36 7 2
+text17 0 F2A 1E54 A 2
+text19 0 F16 1E2C 5 2
+text20 0 F11 1E22 5 2
+text21 0 F0D 1E1A 4 2
 cstackCOMMON 1 70 70 A 1
-intentry 0 4 8 49C 2
-reset_vec 0 0 0 2 2
-bssBANK0 1 20 20 4C 1
-bssBANK1 1 A0 A0 20 1
+cstackBANK0 1 20 20 4F 1
+inittext 0 F40 1E80 C 2
+intentry 0 4 8 7FC 2
+reset_vec 0 0 0 4 2
+bssBANK1 1 A0 A0 40 1
+idataBANK0 0 F78 1EF0 1D 2
+clrtext 0 F34 1E68 C 2
 config 0 8007 1000E 5 2

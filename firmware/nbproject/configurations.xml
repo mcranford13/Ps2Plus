@@ -8,6 +8,7 @@
       <itemPath>Controller.h</itemPath>
       <itemPath>PicConfig.h</itemPath>
       <itemPath>Spi.h</itemPath>
+      <itemPath>Nvm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,6 +21,7 @@
       <itemPath>Controller.c</itemPath>
       <itemPath>PicConfig.c</itemPath>
       <itemPath>Spi.c</itemPath>
+      <itemPath>Nvm.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

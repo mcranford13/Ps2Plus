@@ -1,4 +1,4 @@
-# 1 "Controller.c"
+# 1 "Nvm.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "/opt/microchip/xc8/v2.05/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Controller.c" 2
+# 1 "Nvm.c" 2
+# 1 "./Nvm.h" 1
 
 
 
@@ -14,9 +15,6 @@
 
 
 
-
-# 1 "./Controller.h" 1
-# 11 "./Controller.h"
 # 1 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 1 3
 # 18 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -20688,366 +20686,63 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 2 3
-# 12 "./Controller.h" 2
-# 61 "./Controller.h"
-typedef enum {
-
-    DLeft,
-    DDown,
-    DRight,
-    DUp,
-    Start,
-    R3,
-    L3,
-    Select
-} digitalByteFirst;
-
-typedef enum {
-
-    Square,
-    X,
-    Circle,
-    Triangle,
-    R1,
-    L1,
-    R2,
-    L2
-} digitalByteSecond;
-
-
-extern char digitalStateFirst = 0xFF;
-extern char digitalStateSecond = 0xFF;
-
-extern char analogStateFirst[8] = {0};
-extern char analogStateSecond[8] = {0};
-
-
-extern char rxData = 0xF7;
-extern char ryData = 0xF7;
-extern char lxData = 0xF7;
-extern char lyData = 0xF7;
-
-char lutLX[256];
-char lutLY[256];
-char lutRX[256];
-char lutRY[256];
-
-unsigned char defaultAnalogSticks = 1;
-unsigned char debounceLoops = 3;
-
-unsigned char DigitalControllerByte1[8];
-unsigned char DigitalControllerByte2[8];
-unsigned char PreviousDigitalByte1[8];
-unsigned char PreviousDigitalByte2[8];
-
-unsigned char IndexDigitalByte1[8] = {0};
-unsigned char IndexDigitalByte2[8] = {0};
-
-unsigned char index = 0;
-
-unsigned char analogMin = 0;
-unsigned char analogMax = 255;
-
-
-void readController(char analogMode);
-unsigned int readADC(int channel);
-void readControllerAnalog();
-char reversebyte(char byte);
-void lutInit();
-void configureController();
-# 10 "Controller.c" 2
-# 1 "./Nvm.h" 1
+# 9 "./Nvm.h" 2
 # 18 "./Nvm.h"
     void eepromWrite(unsigned char address, char data);
     char eepromRead(unsigned char address);
     void eepromWriteBuf(unsigned char address, unsigned char *buffer, unsigned char length);
     void eepromReadBuf(unsigned char address, unsigned char *buffer, unsigned char length);
     void nvmUnlock();
-# 11 "Controller.c" 2
+# 2 "Nvm.c" 2
 
-void readController(char analogMode) {
-
-
-    DigitalControllerByte1[DDown] = RA7;
-    DigitalControllerByte1[DUp] = RA6;
-    DigitalControllerByte1[DLeft] = RB0;
-    DigitalControllerByte1[DRight] = RB1;
-    DigitalControllerByte1[R3] = RD0;
-    DigitalControllerByte1[L3] = RC2;
-    DigitalControllerByte1[Start] = RB6;
-    DigitalControllerByte1[Select] = RB7;
-
-    DigitalControllerByte2[Square] = RA0;
-    DigitalControllerByte2[Circle] = RA3;
-    DigitalControllerByte2[X] = RA2;
-    DigitalControllerByte2[Triangle] = RA1;
-    DigitalControllerByte2[R1] = RB4;
-    DigitalControllerByte2[R2] = RB5;
-    DigitalControllerByte2[L1] = RB2;
-    DigitalControllerByte2[L2] = RB3;
-# 41 "Controller.c"
-    if (index > Select) {
-        index = 0;
-    }
+void eepromWrite(unsigned char address, char data) {
 
 
-    if (!DigitalControllerByte1[index]) {
-        IndexDigitalByte1[index]++;
-    }
-    if (!DigitalControllerByte2[index]) {
-        IndexDigitalByte2[index]++;
-    }
-
-
-    if (DigitalControllerByte1[index] ^ PreviousDigitalByte1[index]) {
-        IndexDigitalByte1[index] = 0;
-        digitalStateFirst |= 1 << index;
-
-        if (analogMode) {
-            analogStateFirst[index] = 0x00;
-        }
-
-    }
-    if (DigitalControllerByte2[index] ^ PreviousDigitalByte2[index]) {
-        IndexDigitalByte2[index] = 0;
-        digitalStateSecond |= 1 << index;
-
-        if (analogMode) {
-            analogStateSecond[index] = 0x00;
-        }
-
-    }
-
-
-    if (IndexDigitalByte1[index] >= debounceLoops) {
-        digitalStateFirst &= ~(1 << index);
-
-        if (analogMode) {
-            analogStateFirst[index] = 0xFF;
-        }
-
-    }
-    if (IndexDigitalByte2[index] >= debounceLoops) {
-        digitalStateSecond &= ~(1 << index);
-
-        if (analogMode) {
-            analogStateSecond[index] = 0xFF;
-        }
-
-    }
-
-
-    PreviousDigitalByte1[index] = DigitalControllerByte1[index];
-    PreviousDigitalByte2[index] = DigitalControllerByte2[index];
-
-    index++;
-}
-
-static char Map(int x, int inMin, int inMax, int outMin, int outMax) {
-
-    return (((x - inMin) * (outMax - outMin)) / (inMax - inMin)) + outMin;
-}
-
-void lutInit() {
-
-    char lxMin = eepromRead(0x60);
-    char lxMax = eepromRead(0x61);
-    char lyMin = eepromRead(0x62);
-    char lyMax = eepromRead(0x63);
-
-    char rxMin = eepromRead(0x64);
-    char rxMax = eepromRead(0x65);
-    char ryMin = eepromRead(0x66);
-    char ryMax = eepromRead(0x67);
-
-    for (int position = 0; position < 256; position++) {
-
-
-        if (position < lxMin) {
-
-            lutLX[position] = 0;
-        } else if (position > lxMax) {
-            lutLX[position] = 255;
-
-
-        } else {
-            lutLX[position] = Map(position, lxMin, lxMax, 0, 255);
-        }
-
-
-        if (position < lyMin) {
-            lutLY[position] = 0;
-        } else if (position > lyMax) {
-            lutLY[position] = 255;
-
-
-        } else {
-            lutLY[position] = Map(position, lyMin, lyMax, 0, 255);
-        }
-
-
-        if (position < rxMin) {
-            lutRX[position] = 0;
-        } else if (position > rxMax) {
-            lutRX[position] = 255;
-
-
-        } else {
-            lutRX[position] = Map(position, rxMin, rxMax, 0, 255);
-        }
-
-
-        if (position < ryMin) {
-            lutRY[position] = 0;
-        } else if (position > ryMax) {
-            lutRY[position] = 255;
-
-
-        } else {
-            lutRY[position] = Map(position, ryMin, ryMax, 0, 255);
-        }
-
-    }
-}
-
-unsigned int readADC(int channel) {
-    ADPCH = channel;
-    ADPRE = 0x00;
-    ADACQ = 0x3F;
-
-    ADCON0bits.ADGO = 1;
-    while (ADCON0bits.ADGO);
-
-    return ((ADRESH << 6) | (ADRESL >> 2));
-}
-
-char reversebyte(char byte) {
-    byte = (byte & 0xF0) >> 4 | (byte & 0x0F) << 4;
-    byte = (byte & 0xCC) >> 2 | (byte & 0x33) << 2;
-    byte = (byte & 0xAA) >> 1 | (byte & 0x55) << 1;
-
-    return byte;
-}
-
-void readControllerAnalog() {
-
-    lxData = reversebyte(lutLX[readADC(0b010000)]);
-    lyData = reversebyte(lutLY[readADC(0b10001)]);
-
-    rxData = reversebyte(lutRX[readADC(0b010110)]);
-    ryData = reversebyte(lutRY[readADC(0b010111)]);
-
-
-}
-
-void configureController() {
-
+    unsigned char interruptStatus = INTCONbits.GIE;
 
     INTCONbits.GIE = 0;
-    INTCONbits.PEIE = 0;
 
-    char lxMin = readADC(0b010000);
-    char lxMax = readADC(0b010000);
-    char lyMin = readADC(0b10001);
-    char lyMax = readADC(0b10001);
+    NVMCON1bits.NVMREGS = 1;
+    NVMCON1bits.WREN = 1;
 
-    char rxMin = readADC(0b010110);
-    char rxMax = readADC(0b010110);
-    char ryMin = readADC(0b010111);
-    char ryMax = readADC(0b010111);
+    NVMADRH = 0xF0;
+    NVMADRL = address;
 
+    NVMDATL = data;
 
-    char lx;
-    char ly;
-    char rx;
-    char ry;
+    nvmUnlock();
 
+    while (NVMCON1bits.WR);
 
-    while (1) {
+    NVMCON1bits.WREN = 0;
 
-
-        readController(0);
-
-
-        if (digitalStateFirst == 0x6F && digitalStateSecond == 0x3F) {
-
-
-            lxMin = 0;
-            lxMax = 255;
-            lyMin = 0;
-            lyMax = 255;
-
-            rxMin = 0;
-            rxMax = 255;
-            ryMin = 0;
-            ryMax = 255;
-
-            break;
-        }
-
-
-        if (digitalStateFirst == 0x7F && digitalStateSecond == 0xCF) {
-
-            break;
-        }
-
-        lx = readADC(0b010000);
-        ly = readADC(0b10001);
-
-        rx = readADC(0b010110);
-        ry = readADC(0b010111);
-
-
-        if (ly > lyMax) {
-            lyMax = ly;
-        }
-
-        if (ly < lyMin) {
-            lyMin = ly;
-        }
-
-        if (lx > lxMax) {
-            lxMax = lx;
-        }
-
-        if (lx < lxMin) {
-            lxMin = lx;
-        }
+    if (interruptStatus) INTCONbits.GIE = 1;
+}
 
 
 
-        if (ry > ryMax) {
-            ryMax = ry;
-        }
+char eepromRead(unsigned char address) {
 
-        if (ry < ryMin) {
-            ryMin = ry;
-        }
+    char data;
 
-        if (rx > rxMax) {
-            rxMax = rx;
-        }
+    NVMCON1bits.NVMREGS = 1;
+    NVMADRH = 0xF0;
+    NVMADRL = address;
+    NVMCON1bits.RD = 1;
 
-        if (rx < rxMin) {
-            rxMin = rx;
-        }
+    data = NVMDATL;
+
+    return data;
+
+}
 
 
-    }
 
-    eepromWrite(0x60, lxMin);
-    eepromWrite(0x61, lxMax);
-    eepromWrite(0x62, lyMin);
-    eepromWrite(0x63, lyMax);
+void nvmUnlock() {
 
-    eepromWrite(0x64, rxMin);
-    eepromWrite(0x65, rxMax);
-    eepromWrite(0x66, ryMin);
-    eepromWrite(0x67, ryMax);
-
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-
+    NVMCON2 = 0x55;
+    NVMCON2 = 0xAA;
+    NVMCON1bits.WR = 1;
 
 
 }

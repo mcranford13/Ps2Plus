@@ -11,6 +11,7 @@
 #include "Spi.h"
 #include "PicConfig.h"
 #include "Controller.h"
+#include "Nvm.h"
 
 char response[20] = {ANALOG_MODE, END_HEADER};
 char responseLength = 9;
@@ -378,36 +379,13 @@ void __interrupt() PS2Command() {
 
 }
 
-void configureController(){
-    
-    INTCONbits.GIE = 0; //Turn off interrupts while we configure the controller
-    INTCONbits.PEIE = 0;
-    
-    //Read analog values and save into EEPROM
-    while(1){
-        
-        if(SELECT && L2BUTTON && L1BUTTON){
-            break;
-        }
-        
-        
-        
-        
-    }
-    
-    
-    INTCONbits.GIE = 1; //Turn interrupts back on
-    INTCONbits.PEIE = 1;
-    
-    
-    
-}
+
 
 void main(void) {
 
     picInit();
     adcInit();
-    //pwmInit();
+    lutInit();
 
     response[1] = END_HEADER; //Finish header
 
@@ -415,12 +393,19 @@ void main(void) {
     char slaveSelectStatePrev = 0;
     char count = 0;
     ACK = 1;
-
+   
+    
     while (1) {
 
-        if(SELECT && L2BUTTON && L1BUTTON){
+        
+        //0111 1111 0101 1111
+        if(digitalStateFirst == 0x7F && digitalStateSecond == 0x5F){
+            
+            
             configureController();
         }
+        
+        
         slaveSelect = SLAVE_SELECT;
 
         if (slaveSelect) {
@@ -443,10 +428,12 @@ void main(void) {
 
 
         readController(analogMode);
+        
         readControllerAnalog();
     }
+    
 
-    return;
+    
 }
 
 

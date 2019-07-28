@@ -3,4 +3,5 @@ main.c  \
 Opcodes.h  \
 Spi.h  \
 PicConfig.h  \
-Controller.h 
+Controller.h  \
+Nvm.h 

@@ -1,133 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"29866 /opt/microchip/xc8/v2.05/pic/include/pic16f18876.h
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 29866: extern volatile unsigned char PPSLOCK __attribute__((address(0xE8F)));
-[v _PPSLOCK `Vuc ~T0 @X0 0 e@3727 ]
-"2126
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2126: extern volatile unsigned char ADCON0 __attribute__((address(0x093)));
-[v _ADCON0 `Vuc ~T0 @X0 0 e@147 ]
-"2237
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2237: extern volatile unsigned char ADCON1 __attribute__((address(0x094)));
-[v _ADCON1 `Vuc ~T0 @X0 0 e@148 ]
-"2276
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2276: extern volatile unsigned char ADCON2 __attribute__((address(0x095)));
-[v _ADCON2 `Vuc ~T0 @X0 0 e@149 ]
-"2604
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2604: extern volatile unsigned char ADREF __attribute__((address(0x09A)));
-[v _ADREF `Vuc ~T0 @X0 0 e@154 ]
-"2494
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2494: extern volatile unsigned char ADCLK __attribute__((address(0x098)));
-[v _ADCLK `Vuc ~T0 @X0 0 e@152 ]
-"2132
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2132:     struct {
-[s S101 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S101 . ADGO . ADFM ADCS . ADCONT ADON ]
-"2141
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2141:     struct {
-[s S102 :1 `uc 1 :1 `uc 1 :2 `uc 1 ]
-[n S102 . DONE . ADFRM ]
-"2146
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2146:     struct {
-[s S103 :1 `uc 1 ]
-[n S103 . nDONE ]
-"2149
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2149:     struct {
-[s S104 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S104 . GO . ADFM0 ADFM1 ]
-"2155
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2155:     struct {
-[s S105 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S105 . GO_nDONE . ADFRM0 ADFRM1 ]
-"2131
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2131: typedef union {
-[u S100 `S101 1 `S102 1 `S103 1 `S104 1 `S105 1 ]
-[n S100 . . . . . . ]
-"2162
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 2162: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x093)));
-[v _ADCON0bits `VS100 ~T0 @X0 0 e@147 ]
-"670
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 670: extern volatile unsigned char TRISA __attribute__((address(0x011)));
-[v _TRISA `Vuc ~T0 @X0 0 e@17 ]
-"732
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 732: extern volatile unsigned char TRISB __attribute__((address(0x012)));
-[v _TRISB `Vuc ~T0 @X0 0 e@18 ]
-"794
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 794: extern volatile unsigned char TRISC __attribute__((address(0x013)));
-[v _TRISC `Vuc ~T0 @X0 0 e@19 ]
-"856
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 856: extern volatile unsigned char TRISD __attribute__((address(0x014)));
-[v _TRISD `Vuc ~T0 @X0 0 e@20 ]
-"918
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 918: extern volatile unsigned char TRISE __attribute__((address(0x015)));
-[v _TRISE `Vuc ~T0 @X0 0 e@21 ]
-"33554
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 33554: extern volatile unsigned char ANSELA __attribute__((address(0xF38)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@3896 ]
-"34174
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 34174: extern volatile unsigned char ANSELB __attribute__((address(0xF43)));
-[v _ANSELB `Vuc ~T0 @X0 0 e@3907 ]
-"34794
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 34794: extern volatile unsigned char ANSELC __attribute__((address(0xF4E)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@3918 ]
-"35414
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 35414: extern volatile unsigned char ANSELD __attribute__((address(0xF59)));
-[v _ANSELD `Vuc ~T0 @X0 0 e@3929 ]
-"35848
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 35848: extern volatile unsigned char ANSELE __attribute__((address(0xF64)));
-[v _ANSELE `Vuc ~T0 @X0 0 e@3940 ]
-"33616
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 33616: extern volatile unsigned char WPUA __attribute__((address(0xF39)));
-[v _WPUA `Vuc ~T0 @X0 0 e@3897 ]
-"34236
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 34236: extern volatile unsigned char WPUB __attribute__((address(0xF44)));
-[v _WPUB `Vuc ~T0 @X0 0 e@3908 ]
-"34856
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 34856: extern volatile unsigned char WPUC __attribute__((address(0xF4F)));
-[v _WPUC `Vuc ~T0 @X0 0 e@3919 ]
-"35476
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 35476: extern volatile unsigned char WPUD __attribute__((address(0xF5A)));
-[v _WPUD `Vuc ~T0 @X0 0 e@3930 ]
-"35880
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 35880: extern volatile unsigned char WPUE __attribute__((address(0xF65)));
-[v _WPUE `Vuc ~T0 @X0 0 e@3941 ]
-"50 PicConfig.c
-[; ;PicConfig.c: 50:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_HIGH, SPI_ACTIVE_2_IDLE);
-[c E12122 32 33 34 35 36 37 .. ]
-[n E12122 . SPI_MASTER_OSC_DIV4 SPI_MASTER_OSC_DIV16 SPI_MASTER_OSC_DIV64 SPI_MASTER_TMR2 SPI_SLAVE_SS_EN SPI_SLAVE_SS_DIS  ]
-[c E12130 0 128 .. ]
-[n E12130 . SPI_DATA_SAMPLE_MIDDLE SPI_DATA_SAMPLE_END  ]
-[c E12134 16 0 .. ]
-[n E12134 . SPI_CLOCK_IDLE_HIGH SPI_CLOCK_IDLE_LOW  ]
-[c E12138 0 64 .. ]
-[n E12138 . SPI_IDLE_2_ACTIVE SPI_ACTIVE_2_IDLE  ]
-"42 ./Spi.h
-[; ;./Spi.h: 42: void spiInit(Spi_Type, Spi_Data_Sample, Spi_Clock_Idle, Spi_Transmit_Edge);
-[v _spiInit `(v ~T0 @X0 0 ef4`E12122`E12130`E12134`E12138 ]
-"800 /opt/microchip/xc8/v2.05/pic/include/pic16f18876.h
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 800:     struct {
-[s S47 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S47 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-"799
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 799: typedef union {
-[u S46 `S47 1 ]
-[n S46 . . ]
-"811
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 811: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x013)));
-[v _TRISCbits `VS46 ~T0 @X0 0 e@19 ]
-"676
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 676:     struct {
-[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S43 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
-"675
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 675: typedef union {
-[u S42 `S43 1 ]
-[n S42 . . ]
-"687
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 687: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x011)));
-[v _TRISAbits `VS42 ~T0 @X0 0 e@17 ]
-"32854
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 32854: extern volatile unsigned char RC5PPS __attribute__((address(0xF25)));
-[v _RC5PPS `Vuc ~T0 @X0 0 e@3877 ]
-"357
+"357 /opt/microchip/xc8/v2.05/pic/include/pic16f18876.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 357:     struct {
 [s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S31 . INTEDG . PEIE GIE ]
@@ -138,12 +10,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "364
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 364: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"43240
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 43240: extern volatile __bit SSP1IF __attribute__((address(0x3878)));
-[v _SSP1IF `Vb ~T0 @X0 0 e@14456 ]
-"43237
-[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 43237: extern volatile __bit SSP1IE __attribute__((address(0x38C8)));
-[v _SSP1IE `Vb ~T0 @X0 0 e@14536 ]
+"23493
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 23493:     struct {
+[s S1062 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1062 . RD WR WREN WRERR FREE LWLO NVMREGS ]
+"23492
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 23492: typedef union {
+[u S1061 `S1062 1 ]
+[n S1061 . . ]
+"23503
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 23503: extern volatile NVMCON1bits_t NVMCON1bits __attribute__((address(0x81E)));
+[v _NVMCON1bits `VS1061 ~T0 @X0 0 e@2078 ]
+"23319
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 23319: extern volatile unsigned char NVMADRH __attribute__((address(0x81B)));
+[v _NVMADRH `Vuc ~T0 @X0 0 e@2075 ]
+"23257
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 23257: extern volatile unsigned char NVMADRL __attribute__((address(0x81A)));
+[v _NVMADRL `Vuc ~T0 @X0 0 e@2074 ]
+"23375
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 23375: extern volatile unsigned char NVMDATL __attribute__((address(0x81C)));
+[v _NVMDATL `Vuc ~T0 @X0 0 e@2076 ]
+"22 ./Nvm.h
+[; ;./Nvm.h: 22:     void nvmUnlock();
+[v _nvmUnlock `(v ~T0 @X0 0 e? ]
+"23543 /opt/microchip/xc8/v2.05/pic/include/pic16f18876.h
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 23543: extern volatile unsigned char NVMCON2 __attribute__((address(0x81F)));
+[v _NVMCON2 `Vuc ~T0 @X0 0 e@2079 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic16f18876.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1779,198 +1671,107 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36361
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic16f18876.h: 36361: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"19 ./PicConfig.h
-[p x FEXTOSC = OFF ]
-"20
-[p x RSTOSC = HFINT32 ]
-"21
-[p x CLKOUTEN = OFF ]
-"22
-[p x CSWEN = ON ]
-"23
-[p x FCMEN = ON ]
-"26
-[p x MCLRE = OFF ]
-"27
-[p x PWRTE = OFF ]
-"28
-[p x LPBOREN = OFF ]
-"29
-[p x BOREN = ON ]
-"30
-[p x BORV = LO ]
-"31
-[p x ZCD = OFF ]
-"32
-[p x PPS1WAY = OFF ]
-"33
-[p x STVREN = ON ]
-"36
-[p x WDTCPS = WDTCPS_31 ]
-"37
-[p x WDTE = OFF ]
-"38
-[p x WDTCWS = WDTCWS_7 ]
-"39
-[p x WDTCCS = SC ]
-"42
-[p x WRT = OFF ]
-"43
-[p x SCANE = available ]
-"44
-[p x LVP = ON ]
-"47
-[p x CP = OFF ]
-"48
-[p x CPD = OFF ]
-"3 PicConfig.c
-[; ;PicConfig.c: 3: void ppsUnlock() {
-[v _ppsUnlock `(v ~T0 @X0 1 ef ]
+"3 Nvm.c
+[; ;Nvm.c: 3: void eepromWrite(unsigned char address, char data) {
+[v _eepromWrite `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[e :U _ppsUnlock ]
+[e :U _eepromWrite ]
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-"4
-[; ;PicConfig.c: 4:     PPSLOCK = 0x55;
-[e = _PPSLOCK -> -> 85 `i `uc ]
-"5
-[; ;PicConfig.c: 5:     PPSLOCK = 0xAA;
-[e = _PPSLOCK -> -> 170 `i `uc ]
 "6
-[; ;PicConfig.c: 6:     PPSLOCK = 0;
-[e = _PPSLOCK -> -> 0 `i `uc ]
-"7
-[; ;PicConfig.c: 7: }
+[; ;Nvm.c: 6:     unsigned char interruptStatus = INTCONbits.GIE;
+[v _interruptStatus `uc ~T0 @X0 1 a ]
+[e = _interruptStatus . . _INTCONbits 0 3 ]
+"8
+[; ;Nvm.c: 8:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+"10
+[; ;Nvm.c: 10:     NVMCON1bits.NVMREGS = 1;
+[e = . . _NVMCON1bits 0 6 -> -> 1 `i `uc ]
+"11
+[; ;Nvm.c: 11:     NVMCON1bits.WREN = 1;
+[e = . . _NVMCON1bits 0 2 -> -> 1 `i `uc ]
+"13
+[; ;Nvm.c: 13:     NVMADRH = 0xF0;
+[e = _NVMADRH -> -> 240 `i `uc ]
+"14
+[; ;Nvm.c: 14:     NVMADRL = address;
+[e = _NVMADRL _address ]
+"16
+[; ;Nvm.c: 16:     NVMDATL = data;
+[e = _NVMDATL -> _data `uc ]
+"18
+[; ;Nvm.c: 18:     nvmUnlock();
+[e ( _nvmUnlock ..  ]
+"20
+[; ;Nvm.c: 20:     while (NVMCON1bits.WR);
+[e $U 1607  ]
+[e :U 1608 ]
+[e :U 1607 ]
+[e $ != -> . . _NVMCON1bits 0 1 `i -> 0 `i 1608  ]
+[e :U 1609 ]
+"22
+[; ;Nvm.c: 22:     NVMCON1bits.WREN = 0;
+[e = . . _NVMCON1bits 0 2 -> -> 0 `i `uc ]
+"24
+[; ;Nvm.c: 24:     if (interruptStatus) INTCONbits.GIE = 1;
+[e $ ! != -> _interruptStatus `i -> 0 `i 1610  ]
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[e :U 1610 ]
+"25
+[; ;Nvm.c: 25: }
 [e :UE 1606 ]
 }
-"9
-[; ;PicConfig.c: 9: void ppsLock() {
-[v _ppsLock `(v ~T0 @X0 1 ef ]
-{
-[e :U _ppsLock ]
-[f ]
-"10
-[; ;PicConfig.c: 10:     PPSLOCK = 0x55;
-[e = _PPSLOCK -> -> 85 `i `uc ]
-"11
-[; ;PicConfig.c: 11:     PPSLOCK = 0xAA;
-[e = _PPSLOCK -> -> 170 `i `uc ]
-"12
-[; ;PicConfig.c: 12:     PPSLOCK = 1;
-[e = _PPSLOCK -> -> 1 `i `uc ]
-"13
-[; ;PicConfig.c: 13: }
-[e :UE 1607 ]
-}
-"15
-[; ;PicConfig.c: 15: void adcInit() {
-[v _adcInit `(v ~T0 @X0 1 ef ]
-{
-[e :U _adcInit ]
-[f ]
-"16
-[; ;PicConfig.c: 16:     ADCON0 = 0x04;
-[e = _ADCON0 -> -> 4 `i `uc ]
-"17
-[; ;PicConfig.c: 17:     ADCON1 = 0;
-[e = _ADCON1 -> -> 0 `i `uc ]
-"18
-[; ;PicConfig.c: 18:     ADCON2 = 0;
-[e = _ADCON2 -> -> 0 `i `uc ]
-"19
-[; ;PicConfig.c: 19:     ADREF = 0;
-[e = _ADREF -> -> 0 `i `uc ]
-"20
-[; ;PicConfig.c: 20:     ADCLK = 0x3F;
-[e = _ADCLK -> -> 63 `i `uc ]
-"21
-[; ;PicConfig.c: 21:     ADCON0bits.ADON = 1;
-[e = . . _ADCON0bits 0 6 -> -> 1 `i `uc ]
-"22
-[; ;PicConfig.c: 22: }
-[e :UE 1608 ]
-}
-"26
-[; ;PicConfig.c: 26: void picInit() {
-[v _picInit `(v ~T0 @X0 1 ef ]
-{
-[e :U _picInit ]
-[f ]
 "29
-[; ;PicConfig.c: 29:     TRISA = 0xFF;
-[e = _TRISA -> -> 255 `i `uc ]
-"30
-[; ;PicConfig.c: 30:     TRISB = 0xFF;
-[e = _TRISB -> -> 255 `i `uc ]
+[; ;Nvm.c: 29: char eepromRead(unsigned char address) {
+[v _eepromRead `(uc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _eepromRead ]
+[v _address `uc ~T0 @X0 1 r1 ]
+[f ]
 "31
-[; ;PicConfig.c: 31:     TRISC = 0xFF;
-[e = _TRISC -> -> 255 `i `uc ]
-"32
-[; ;PicConfig.c: 32:     TRISD = 0xEF;
-[e = _TRISD -> -> 239 `i `uc ]
+[; ;Nvm.c: 31:     char data;
+[v _data `uc ~T0 @X0 1 a ]
 "33
-[; ;PicConfig.c: 33:     TRISE = 0xFF;
-[e = _TRISE -> -> 255 `i `uc ]
+[; ;Nvm.c: 33:     NVMCON1bits.NVMREGS = 1;
+[e = . . _NVMCON1bits 0 6 -> -> 1 `i `uc ]
+"34
+[; ;Nvm.c: 34:     NVMADRH = 0xF0;
+[e = _NVMADRH -> -> 240 `i `uc ]
+"35
+[; ;Nvm.c: 35:     NVMADRL = address;
+[e = _NVMADRL _address ]
 "36
-[; ;PicConfig.c: 36:     ANSELA = 0;
-[e = _ANSELA -> -> 0 `i `uc ]
-"37
-[; ;PicConfig.c: 37:     ANSELB = 0;
-[e = _ANSELB -> -> 0 `i `uc ]
+[; ;Nvm.c: 36:     NVMCON1bits.RD = 1;
+[e = . . _NVMCON1bits 0 0 -> -> 1 `i `uc ]
 "38
-[; ;PicConfig.c: 38:     ANSELC = 0xC3;
-[e = _ANSELC -> -> 195 `i `uc ]
-"39
-[; ;PicConfig.c: 39:     ANSELD = 0;
-[e = _ANSELD -> -> 0 `i `uc ]
+[; ;Nvm.c: 38:     data = NVMDATL;
+[e = _data -> _NVMDATL `uc ]
 "40
-[; ;PicConfig.c: 40:     ANSELE = 0;
-[e = _ANSELE -> -> 0 `i `uc ]
-"43
-[; ;PicConfig.c: 43:     WPUA = 0xCF;
-[e = _WPUA -> -> 207 `i `uc ]
-"44
-[; ;PicConfig.c: 44:     WPUB = 0xFF;
-[e = _WPUB -> -> 255 `i `uc ]
-"45
-[; ;PicConfig.c: 45:     WPUC = 0x04;
-[e = _WPUC -> -> 4 `i `uc ]
+[; ;Nvm.c: 40:     return data;
+[e ) _data ]
+[e $UE 1611  ]
+"42
+[; ;Nvm.c: 42: }
+[e :UE 1611 ]
+}
 "46
-[; ;PicConfig.c: 46:     WPUD = 0x01;
-[e = _WPUD -> -> 1 `i `uc ]
-"47
-[; ;PicConfig.c: 47:     WPUE = 0;
-[e = _WPUE -> -> 0 `i `uc ]
+[; ;Nvm.c: 46: void nvmUnlock() {
+[v _nvmUnlock `(v ~T0 @X0 1 ef ]
+{
+[e :U _nvmUnlock ]
+[f ]
+"48
+[; ;Nvm.c: 48:     NVMCON2 = 0x55;
+[e = _NVMCON2 -> -> 85 `i `uc ]
+"49
+[; ;Nvm.c: 49:     NVMCON2 = 0xAA;
+[e = _NVMCON2 -> -> 170 `i `uc ]
 "50
-[; ;PicConfig.c: 50:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_HIGH, SPI_ACTIVE_2_IDLE);
-[e ( _spiInit (4 , , , . `E12122 4 . `E12130 0 . `E12134 0 . `E12138 1 ]
-"52
-[; ;PicConfig.c: 52:     TRISCbits.TRISC5 = 0;
-[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+[; ;Nvm.c: 50:     NVMCON1bits.WR = 1;
+[e = . . _NVMCON1bits 0 1 -> -> 1 `i `uc ]
 "53
-[; ;PicConfig.c: 53:     TRISAbits.TRISA4 = 0;
-[e = . . _TRISAbits 0 4 -> -> 0 `i `uc ]
-"54
-[; ;PicConfig.c: 54:     ppsUnlock();
-[e ( _ppsUnlock ..  ]
-"56
-[; ;PicConfig.c: 56:     RC5PPS = 0x15;
-[e = _RC5PPS -> -> 21 `i `uc ]
-"58
-[; ;PicConfig.c: 58:     ppsLock();
-[e ( _ppsLock ..  ]
-"61
-[; ;PicConfig.c: 61:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"62
-[; ;PicConfig.c: 62:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"63
-[; ;PicConfig.c: 63:     SSP1IF = 0;
-[e = _SSP1IF -> -> 0 `i `b ]
-"64
-[; ;PicConfig.c: 64:     SSP1IE = 1;
-[e = _SSP1IE -> -> 1 `i `b ]
-"65
-[; ;PicConfig.c: 65: }
-[e :UE 1609 ]
+[; ;Nvm.c: 53: }
+[e :UE 1612 ]
 }

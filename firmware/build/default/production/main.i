@@ -20762,6 +20762,8 @@ char spiRead();
 
 
 
+
+
 void picInit(void);
 void pwmInit(void);
 
@@ -20770,7 +20772,7 @@ void ppsLock(void);
 void adcInit(void);
 # 13 "main.c" 2
 # 1 "./Controller.h" 1
-# 54 "./Controller.h"
+# 61 "./Controller.h"
 typedef enum {
 
     DLeft,
@@ -20781,7 +20783,7 @@ typedef enum {
     R3,
     L3,
     Select
-}digitalByteFirst;
+} digitalByteFirst;
 
 typedef enum {
 
@@ -20793,7 +20795,8 @@ typedef enum {
     L1,
     R2,
     L2
-}digitalByteSecond;
+} digitalByteSecond;
+
 
 extern char digitalStateFirst = 0xFF;
 extern char digitalStateSecond = 0xFF;
@@ -20802,13 +20805,17 @@ extern char analogStateFirst[8] = {0};
 extern char analogStateSecond[8] = {0};
 
 
-extern char rxData = 0xFE;
-extern char ryData = 0xFE;
-extern char lxData = 0xFE;
-extern char lyData = 0xFE;
+extern char rxData = 0xF7;
+extern char ryData = 0xF7;
+extern char lxData = 0xF7;
+extern char lyData = 0xF7;
 
+char lutLX[256];
+char lutLY[256];
+char lutRX[256];
+char lutRY[256];
 
-
+unsigned char defaultAnalogSticks = 1;
 unsigned char debounceLoops = 3;
 
 unsigned char DigitalControllerByte1[8];
@@ -20829,7 +20836,17 @@ void readController(char analogMode);
 unsigned int readADC(int channel);
 void readControllerAnalog();
 char reversebyte(char byte);
+void lutInit();
+void configureController();
 # 14 "main.c" 2
+# 1 "./Nvm.h" 1
+# 18 "./Nvm.h"
+    void eepromWrite(unsigned char address, char data);
+    char eepromRead(unsigned char address);
+    void eepromWriteBuf(unsigned char address, unsigned char *buffer, unsigned char length);
+    void eepromReadBuf(unsigned char address, unsigned char *buffer, unsigned char length);
+    void nvmUnlock();
+# 15 "main.c" 2
 
 char response[20] = {0x9E, 0x5A};
 char responseLength = 9;
@@ -21197,18 +21214,13 @@ void __attribute__((picinterrupt(("")))) PS2Command() {
 
 }
 
-void configureController(){
 
-
-
-
-}
 
 void main(void) {
 
     picInit();
     adcInit();
-
+    lutInit();
 
     response[1] = 0x5A;
 
@@ -21217,11 +21229,18 @@ void main(void) {
     char count = 0;
     RA4 = 1;
 
+
     while (1) {
 
-        if(RB7 && RB3 && RB2){
+
+
+        if(digitalStateFirst == 0x7F && digitalStateSecond == 0x5F){
+
+
             configureController();
         }
+
+
         slaveSelect = RA5;
 
         if (slaveSelect) {
@@ -21244,8 +21263,10 @@ void main(void) {
 
 
         readController(analogMode);
+
         readControllerAnalog();
     }
 
-    return;
+
+
 }

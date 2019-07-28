@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F18876 ]
 [d frameptr 6 ]
-"16 /home/matthew/Projects/Ps2Plus/firmware/Controller.c
+"15 /home/matthew/Projects/Ps2Plus/firmware/Controller.c
 [e E12122 . `uc
 DLeft 0
 DDown 1
@@ -14,7 +14,7 @@ R3 5
 L3 6
 Select 7
 ]
-"25
+"24
 [e E12132 . `uc
 Square 0
 X 1
@@ -25,7 +25,7 @@ L1 5
 R2 6
 L2 7
 ]
-"87 /home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+"50 /home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
 [e E12122 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -79,29 +79,39 @@ SPI_ACTIVE_2_IDLE 64
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"13 /home/matthew/Projects/Ps2Plus/firmware/Controller.c
+"12 /home/matthew/Projects/Ps2Plus/firmware/Controller.c
 [v _readController readController `(v  1 e 1 0 ]
-"128
+"98
+[v _Map Map `(uc  1 s 1 Map ]
+"103
+[v _lutInit lutInit `(v  1 e 1 0 ]
+"165
 [v _readADC readADC `(ui  1 e 2 0 ]
-"139
+"176
 [v _reversebyte reversebyte `(uc  1 e 1 0 ]
-"147
+"184
 [v _readControllerAnalog readControllerAnalog `(v  1 e 1 0 ]
-"23 /home/matthew/Projects/Ps2Plus/firmware/main.c
-[v _pollController pollController `(v  1 e 1 0 ]
-"56
-[v _PS2Command PS2Command `II(v  1 e 1 0 ]
-"381
+"195
 [v _configureController configureController `(v  1 e 1 0 ]
-"388
+"24 /home/matthew/Projects/Ps2Plus/firmware/main.c
+[v _pollController pollController `(v  1 e 1 0 ]
+"57
+[v _PS2Command PS2Command `II(v  1 e 1 0 ]
+"384
 [v _main main `(v  1 e 1 0 ]
+"3 /home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+[v _eepromWrite eepromWrite `(v  1 e 1 0 ]
+"29
+[v _eepromRead eepromRead `(uc  1 e 1 0 ]
+"46
+[v _nvmUnlock nvmUnlock `(v  1 e 1 0 ]
 "3 /home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
 [v _ppsUnlock ppsUnlock `(v  1 e 1 0 ]
 "9
 [v _ppsLock ppsLock `(v  1 e 1 0 ]
 "15
 [v _adcInit adcInit `(v  1 e 1 0 ]
-"63
+"26
 [v _picInit picInit `(v  1 e 1 0 ]
 "10 /home/matthew/Projects/Ps2Plus/firmware/Spi.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -111,47 +121,55 @@ SPI_ACTIVE_2_IDLE 64
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 "37
 [v _spiRead spiRead `(uc  1 e 1 0 ]
-"78 /home/matthew/Projects/Ps2Plus/firmware/Controller.h
+"86 /home/matthew/Projects/Ps2Plus/firmware/Controller.h
 [v _digitalStateFirst digitalStateFirst `uc  1 e 1 0 ]
-"79
-[v _digitalStateSecond digitalStateSecond `uc  1 e 1 0 ]
-"81
-[v _analogStateFirst analogStateFirst `[8]uc  1 e 8 0 ]
-"82
-[v _analogStateSecond analogStateSecond `[8]uc  1 e 8 0 ]
-"85
-[v _rxData rxData `uc  1 e 1 0 ]
-"86
-[v _ryData ryData `uc  1 e 1 0 ]
 "87
-[v _lxData lxData `uc  1 e 1 0 ]
-"88
-[v _lyData lyData `uc  1 e 1 0 ]
+[v _digitalStateSecond digitalStateSecond `uc  1 e 1 0 ]
+"89
+[v _analogStateFirst analogStateFirst `[8]uc  1 e 8 0 ]
+"90
+[v _analogStateSecond analogStateSecond `[8]uc  1 e 8 0 ]
+"93
+[v _rxData rxData `uc  1 e 1 0 ]
 "94
-[v _DigitalControllerByte1 DigitalControllerByte1 `[8]uc  1 e 8 0 ]
+[v _ryData ryData `uc  1 e 1 0 ]
 "95
-[v _DigitalControllerByte2 DigitalControllerByte2 `[8]uc  1 e 8 0 ]
+[v _lxData lxData `uc  1 e 1 0 ]
 "96
-[v _PreviousDigitalByte1 PreviousDigitalByte1 `[8]uc  1 e 8 0 ]
-"97
-[v _PreviousDigitalByte2 PreviousDigitalByte2 `[8]uc  1 e 8 0 ]
+[v _lyData lyData `uc  1 e 1 0 ]
+"98
+[v _lutLX lutLX `[256]uc  1 e 256 @9968 ]
 "99
-[v _IndexDigitalByte1 IndexDigitalByte1 `[8]uc  1 e 8 0 ]
+[v _lutLY lutLY `[256]uc  1 e 256 @9712 ]
 "100
+[v _lutRX lutRX `[256]uc  1 e 256 @9456 ]
+"101
+[v _lutRY lutRY `[256]uc  1 e 256 @9200 ]
+"106
+[v _DigitalControllerByte1 DigitalControllerByte1 `[8]uc  1 e 8 0 ]
+"107
+[v _DigitalControllerByte2 DigitalControllerByte2 `[8]uc  1 e 8 0 ]
+"108
+[v _PreviousDigitalByte1 PreviousDigitalByte1 `[8]uc  1 e 8 0 ]
+"109
+[v _PreviousDigitalByte2 PreviousDigitalByte2 `[8]uc  1 e 8 0 ]
+"111
+[v _IndexDigitalByte1 IndexDigitalByte1 `[8]uc  1 e 8 0 ]
+"112
 [v _IndexDigitalByte2 IndexDigitalByte2 `[8]uc  1 e 8 0 ]
-"102
+"114
 [v _index index `uc  1 e 1 0 ]
-[s S498 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S212 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "364 /opt/microchip/xc8/v2.05/pic/include/pic16f18876.h
-[u S503 . 1 `S498 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES503  1 e 1 @11 ]
+[u S217 . 1 `S212 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES217  1 e 1 @11 ]
 "670
 [v _TRISA TRISA `VEuc  1 e 1 @17 ]
-[s S476 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S401 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -161,13 +179,13 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "687
-[u S485 . 1 `S476 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES485  1 e 1 @17 ]
+[u S410 . 1 `S401 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES410  1 e 1 @17 ]
 "732
 [v _TRISB TRISB `VEuc  1 e 1 @18 ]
 "794
 [v _TRISC TRISC `VEuc  1 e 1 @19 ]
-[s S278 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S380 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -177,22 +195,10 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "811
-[u S287 . 1 `S278 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES287  1 e 1 @19 ]
+[u S389 . 1 `S380 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES389  1 e 1 @19 ]
 "856
 [v _TRISD TRISD `VEuc  1 e 1 @20 ]
-[s S299 . 1 `uc 1 TRISD0 1 0 :1:0 
-`uc 1 TRISD1 1 0 :1:1 
-`uc 1 TRISD2 1 0 :1:2 
-`uc 1 TRISD3 1 0 :1:3 
-`uc 1 TRISD4 1 0 :1:4 
-`uc 1 TRISD5 1 0 :1:5 
-`uc 1 TRISD6 1 0 :1:6 
-`uc 1 TRISD7 1 0 :1:7 
-]
-"873
-[u S308 . 1 `S299 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES308  1 e 1 @20 ]
 "918
 [v _TRISE TRISE `VEuc  1 e 1 @21 ]
 "1805
@@ -201,7 +207,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _ADRESH ADRESH `VEuc  1 e 1 @141 ]
 "2126
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @147 ]
-[s S142 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S155 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :2:2 
 `uc 1 ADCS 1 0 :1:4 
@@ -210,24 +216,24 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 ADON 1 0 :1:7 
 ]
 "2162
-[s S150 . 1 `uc 1 DONE 1 0 :1:0 
+[s S163 . 1 `uc 1 DONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFRM 1 0 :2:2 
 ]
-[s S154 . 1 `uc 1 nDONE 1 0 :1:0 
+[s S167 . 1 `uc 1 nDONE 1 0 :1:0 
 ]
-[s S156 . 1 `uc 1 GO 1 0 :1:0 
+[s S169 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 `uc 1 ADFM1 1 0 :1:3 
 ]
-[s S161 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S174 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFRM0 1 0 :1:2 
 `uc 1 ADFRM1 1 0 :1:3 
 ]
-[u S166 . 1 `S142 1 . 1 0 `S150 1 . 1 0 `S154 1 . 1 0 `S156 1 . 1 0 `S161 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES166  1 e 1 @147 ]
+[u S179 . 1 `S155 1 . 1 0 `S163 1 . 1 0 `S167 1 . 1 0 `S169 1 . 1 0 `S174 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES179  1 e 1 @147 ]
 "2237
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @148 ]
 "2276
@@ -246,7 +252,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @396 ]
 "4825
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S587 . 1 `uc 1 BF 1 0 :1:0 
+[s S473 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -256,33 +262,33 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 SMP 1 0 :1:7 
 ]
 "4934
-[s S596 . 1 `uc 1 . 1 0 :2:0 
+[s S482 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S601 . 1 `uc 1 . 1 0 :2:0 
+[s S487 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S606 . 1 `uc 1 . 1 0 :2:0 
+[s S492 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S611 . 1 `uc 1 . 1 0 :2:0 
+[s S497 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S616 . 1 `uc 1 . 1 0 :2:0 
+[s S502 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S622 . 1 `uc 1 BF1 1 0 :1:0 
+[s S508 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -291,123 +297,76 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S631 . 1 `uc 1 . 1 0 :2:0 
+[s S517 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S637 . 1 `uc 1 . 1 0 :2:0 
+[s S523 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S643 . 1 `uc 1 . 1 0 :2:0 
+[s S529 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S649 . 1 `uc 1 . 1 0 :2:0 
+[s S535 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S654 . 1 `uc 1 . 1 0 :2:0 
+[s S540 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S659 . 1 `uc 1 . 1 0 :2:0 
+[s S545 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S664 . 1 `uc 1 . 1 0 :2:0 
+[s S550 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S669 . 1 `uc 1 . 1 0 :2:0 
+[s S555 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S674 . 1 `S587 1 . 1 0 `S596 1 . 1 0 `S601 1 . 1 0 `S606 1 . 1 0 `S611 1 . 1 0 `S616 1 . 1 0 `S622 1 . 1 0 `S631 1 . 1 0 `S637 1 . 1 0 `S643 1 . 1 0 `S649 1 . 1 0 `S654 1 . 1 0 `S659 1 . 1 0 `S664 1 . 1 0 `S669 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES674  1 e 1 @399 ]
+[u S560 . 1 `S473 1 . 1 0 `S482 1 . 1 0 `S487 1 . 1 0 `S492 1 . 1 0 `S497 1 . 1 0 `S502 1 . 1 0 `S508 1 . 1 0 `S517 1 . 1 0 `S523 1 . 1 0 `S529 1 . 1 0 `S535 1 . 1 0 `S540 1 . 1 0 `S545 1 . 1 0 `S550 1 . 1 0 `S555 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES560  1 e 1 @399 ]
 "5189
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-"9393
-[v _PR2 PR2 `VEuc  1 e 1 @653 ]
-[s S380 . 1 `uc 1 OUTPS 1 0 :4:0 
-`uc 1 CKPS 1 0 :3:4 
-`uc 1 ON 1 0 :1:7 
+"23257
+[v _NVMADRL NVMADRL `VEuc  1 e 1 @2074 ]
+"23319
+[v _NVMADRH NVMADRH `VEuc  1 e 1 @2075 ]
+"23375
+[v _NVMDATL NVMDATL `VEuc  1 e 1 @2076 ]
+[s S691 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 NVMREGS 1 0 :1:6 
 ]
-"9462
-[s S384 . 1 `uc 1 T2OUTPS 1 0 :4:0 
-`uc 1 T2CKPS 1 0 :3:4 
-`uc 1 T2ON 1 0 :1:7 
-]
-[s S388 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
-`uc 1 T2OUTPS1 1 0 :1:1 
-`uc 1 T2OUTPS2 1 0 :1:2 
-`uc 1 T2OUTPS3 1 0 :1:3 
-`uc 1 T2CKPS0 1 0 :1:4 
-`uc 1 T2CKPS1 1 0 :1:5 
-`uc 1 T2CKPS2 1 0 :1:6 
-]
-[s S396 . 1 `uc 1 OUTPS0 1 0 :1:0 
-`uc 1 OUTPS1 1 0 :1:1 
-`uc 1 OUTPS2 1 0 :1:2 
-`uc 1 OUTPS3 1 0 :1:3 
-`uc 1 CKPS0 1 0 :1:4 
-`uc 1 CKPS1 1 0 :1:5 
-`uc 1 CKPS2 1 0 :1:6 
-`uc 1 TMR2ON 1 0 :1:7 
-]
-[u S405 . 1 `S380 1 . 1 0 `S384 1 . 1 0 `S388 1 . 1 0 `S396 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES405  1 e 1 @654 ]
-"12447
-[v _PWM6DCL PWM6DCL `VEuc  1 e 1 @908 ]
-"12513
-[v _PWM6DCH PWM6DCH `VEuc  1 e 1 @909 ]
-[s S320 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 POL 1 0 :1:4 
-`uc 1 OUT 1 0 :1:5 
-`uc 1 OE 1 0 :1:6 
-`uc 1 EN 1 0 :1:7 
-]
-"12704
-[s S326 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 PWM6POL 1 0 :1:4 
-`uc 1 PWM6OUT 1 0 :1:5 
-`uc 1 PWM6OE 1 0 :1:6 
-`uc 1 PWM6EN 1 0 :1:7 
-]
-[u S332 . 1 `S320 1 . 1 0 `S326 1 . 1 0 ]
-[v _PWM6CONbits PWM6CONbits `VES332  1 e 1 @910 ]
-"12756
-[v _PWM7DCL PWM7DCL `VEuc  1 e 1 @912 ]
-"12822
-[v _PWM7DCH PWM7DCH `VEuc  1 e 1 @913 ]
-"13013
-[s S354 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 PWM7POL 1 0 :1:4 
-`uc 1 PWM7OUT 1 0 :1:5 
-`uc 1 PWM7OE 1 0 :1:6 
-`uc 1 PWM7EN 1 0 :1:7 
-]
-[u S360 . 1 `S320 1 . 1 0 `S354 1 . 1 0 ]
-[v _PWM7CONbits PWM7CONbits `VES360  1 e 1 @914 ]
+"23503
+[u S699 . 1 `S691 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES699  1 e 1 @2078 ]
+"23543
+[v _NVMCON2 NVMCON2 `VEuc  1 e 1 @2079 ]
 "29866
 [v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3727 ]
-"32754
-[v _RC3PPS RC3PPS `VEuc  1 e 1 @3875 ]
 "32854
 [v _RC5PPS RC5PPS `VEuc  1 e 1 @3877 ]
-"33054
-[v _RD1PPS RD1PPS `VEuc  1 e 1 @3881 ]
 "33554
 [v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
 "33616
@@ -471,61 +430,46 @@ SPI_ACTIVE_2_IDLE 64
 [v _SSP1IE SSP1IE `VEb  1 e 0 @14536 ]
 "43240
 [v _SSP1IF SSP1IF `VEb  1 e 0 @14456 ]
-"15 /home/matthew/Projects/Ps2Plus/firmware/main.c
+"16 /home/matthew/Projects/Ps2Plus/firmware/main.c
 [v _response response `[20]uc  1 e 20 0 ]
-"16
-[v _responseLength responseLength `uc  1 e 1 0 ]
 "17
-[v _cmdCounter cmdCounter `uc  1 e 1 0 ]
+[v _responseLength responseLength `uc  1 e 1 0 ]
 "18
-[v _analogMode analogMode `uc  1 e 1 0 ]
+[v _cmdCounter cmdCounter `uc  1 e 1 0 ]
 "19
-[v _escapeMode escapeMode `uc  1 e 1 0 ]
+[v _analogMode analogMode `uc  1 e 1 0 ]
 "20
+[v _escapeMode escapeMode `uc  1 e 1 0 ]
+"21
 [v _previousCmd previousCmd `uc  1 e 1 0 ]
-"388
+"384
 [v _main main `(v  1 e 1 0 ]
 {
-"396
-[v main@slaveSelect slaveSelect `uc  1 a 1 13 ]
-"398
-[v main@count count `uc  1 a 1 12 ]
-"397
-[v main@slaveSelectStatePrev slaveSelectStatePrev `uc  1 a 1 11 ]
-"432
+"392
+[v main@slaveSelect slaveSelect `uc  1 a 1 47 ]
+"394
+[v main@count count `uc  1 a 1 46 ]
+"393
+[v main@slaveSelectStatePrev slaveSelectStatePrev `uc  1 a 1 45 ]
+"437
 } 0
-"147 /home/matthew/Projects/Ps2Plus/firmware/Controller.c
+"184 /home/matthew/Projects/Ps2Plus/firmware/Controller.c
 [v _readControllerAnalog readControllerAnalog `(v  1 e 1 0 ]
 {
-"156
+"193
 } 0
-"139
+"176
 [v _reversebyte reversebyte `(uc  1 e 1 0 ]
 {
 [v reversebyte@byte byte `uc  1 a 1 wreg ]
 [v reversebyte@byte byte `uc  1 a 1 wreg ]
 [v reversebyte@byte byte `uc  1 a 1 3 ]
-"145
+"182
 } 0
-"128
-[v _readADC readADC `(ui  1 e 2 0 ]
-{
-[v readADC@channel channel `i  1 p 2 0 ]
-"137
-} 0
-"13
-[v _readController readController `(v  1 e 1 0 ]
-{
-[v readController@analogMode analogMode `uc  1 a 1 wreg ]
-[v readController@analogMode analogMode `uc  1 a 1 wreg ]
-"16
-[v readController@analogMode analogMode `uc  1 a 1 2 ]
-"97
-} 0
-"63 /home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
+"26 /home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
 [v _picInit picInit `(v  1 e 1 0 ]
 {
-"102
+"65
 } 0
 "10 /home/matthew/Projects/Ps2Plus/firmware/Spi.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -549,22 +493,147 @@ SPI_ACTIVE_2_IDLE 64
 {
 "13
 } 0
-"381 /home/matthew/Projects/Ps2Plus/firmware/main.c
+"103 /home/matthew/Projects/Ps2Plus/firmware/Controller.c
+[v _lutInit lutInit `(v  1 e 1 0 ]
+{
+"115
+[v lutInit@position position `i  1 a 2 42 ]
+"113
+[v lutInit@ryMax ryMax `uc  1 a 1 41 ]
+"112
+[v lutInit@ryMin ryMin `uc  1 a 1 40 ]
+"111
+[v lutInit@rxMax rxMax `uc  1 a 1 39 ]
+"110
+[v lutInit@rxMin rxMin `uc  1 a 1 38 ]
+"108
+[v lutInit@lyMax lyMax `uc  1 a 1 37 ]
+"107
+[v lutInit@lyMin lyMin `uc  1 a 1 36 ]
+"106
+[v lutInit@lxMax lxMax `uc  1 a 1 35 ]
+"105
+[v lutInit@lxMin lxMin `uc  1 a 1 34 ]
+"163
+} 0
+"29 /home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+[v _eepromRead eepromRead `(uc  1 e 1 0 ]
+{
+[v eepromRead@address address `uc  1 a 1 wreg ]
+"31
+[v eepromRead@data data `uc  1 a 1 2 ]
+"29
+[v eepromRead@address address `uc  1 a 1 wreg ]
+"33
+[v eepromRead@address address `uc  1 a 1 1 ]
+"42
+} 0
+"98 /home/matthew/Projects/Ps2Plus/firmware/Controller.c
+[v _Map Map `(uc  1 s 1 Map ]
+{
+[v Map@x x `i  1 p 2 15 ]
+[v Map@inMin inMin `i  1 p 2 17 ]
+[v Map@inMax inMax `i  1 p 2 19 ]
+[v Map@outMin outMin `i  1 p 2 21 ]
+[v Map@outMax outMax `i  1 p 2 23 ]
+"101
+} 0
+"15 /opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 /opt/microchip/xc8/v2.05/pic/sources/c99/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 13 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 12 ]
+[v ___awdiv@counter counter `uc  1 a 1 11 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 6 ]
+[v ___awdiv@dividend dividend `i  1 p 2 8 ]
+"41
+} 0
+"195 /home/matthew/Projects/Ps2Plus/firmware/Controller.c
 [v _configureController configureController `(v  1 e 1 0 ]
 {
-"386
+"215
+[v configureController@ry ry `uc  1 a 1 21 ]
+"214
+[v configureController@rx rx `uc  1 a 1 20 ]
+"213
+[v configureController@ly ly `uc  1 a 1 19 ]
+"212
+[v configureController@lx lx `uc  1 a 1 18 ]
+"209
+[v configureController@ryMax ryMax `uc  1 a 1 17 ]
+"208
+[v configureController@ryMin ryMin `uc  1 a 1 16 ]
+"207
+[v configureController@rxMax rxMax `uc  1 a 1 15 ]
+"206
+[v configureController@rxMin rxMin `uc  1 a 1 14 ]
+"204
+[v configureController@lyMax lyMax `uc  1 a 1 13 ]
+"203
+[v configureController@lyMin lyMin `uc  1 a 1 12 ]
+"202
+[v configureController@lxMax lxMax `uc  1 a 1 11 ]
+"201
+[v configureController@lxMin lxMin `uc  1 a 1 10 ]
+"305
+} 0
+"12
+[v _readController readController `(v  1 e 1 0 ]
+{
+[v readController@analogMode analogMode `uc  1 a 1 wreg ]
+[v readController@analogMode analogMode `uc  1 a 1 wreg ]
+"15
+[v readController@analogMode analogMode `uc  1 a 1 2 ]
+"96
+} 0
+"165
+[v _readADC readADC `(ui  1 e 2 0 ]
+{
+[v readADC@channel channel `i  1 p 2 0 ]
+"174
+} 0
+"3 /home/matthew/Projects/Ps2Plus/firmware/Nvm.c
+[v _eepromWrite eepromWrite `(v  1 e 1 0 ]
+{
+[v eepromWrite@address address `uc  1 a 1 wreg ]
+"6
+[v eepromWrite@interruptStatus interruptStatus `uc  1 a 1 2 ]
+"3
+[v eepromWrite@address address `uc  1 a 1 wreg ]
+[v eepromWrite@data data `uc  1 p 1 0 ]
+"6
+[v eepromWrite@address address `uc  1 a 1 1 ]
+"25
+} 0
+"46
+[v _nvmUnlock nvmUnlock `(v  1 e 1 0 ]
+{
+"53
 } 0
 "15 /home/matthew/Projects/Ps2Plus/firmware/PicConfig.c
 [v _adcInit adcInit `(v  1 e 1 0 ]
 {
 "22
 } 0
-"56 /home/matthew/Projects/Ps2Plus/firmware/main.c
+"57 /home/matthew/Projects/Ps2Plus/firmware/main.c
 [v _PS2Command PS2Command `II(v  1 e 1 0 ]
 {
-"60
+"61
 [v PS2Command@cmd cmd `uc  1 a 1 4 ]
-"379
+"380
 } 0
 "32 /home/matthew/Projects/Ps2Plus/firmware/Spi.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
@@ -585,12 +654,12 @@ SPI_ACTIVE_2_IDLE 64
 {
 "30
 } 0
-"23 /home/matthew/Projects/Ps2Plus/firmware/main.c
+"24 /home/matthew/Projects/Ps2Plus/firmware/main.c
 [v _pollController pollController `(v  1 e 1 0 ]
 {
 [v pollController@response response `*.4uc  1 a 1 wreg ]
 [v pollController@response response `*.4uc  1 a 1 wreg ]
-"25
+"26
 [v pollController@response response `*.4uc  1 a 1 1 ]
-"54
+"55
 } 0

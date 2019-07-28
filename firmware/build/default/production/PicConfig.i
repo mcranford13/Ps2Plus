@@ -20752,6 +20752,8 @@ char spiRead();
 
 
 
+
+
 void picInit(void);
 void pwmInit(void);
 
@@ -20781,44 +20783,7 @@ void adcInit() {
     ADCON0bits.ADON = 1;
 }
 
-void pwmInit() {
 
-
-
-
-
-    ppsUnlock();
-    RC3PPS = 0x0F;
-    RD1PPS = 0x0E;
-    ppsLock();
-
-
-    TRISCbits.TRISC1 = 1;
-    TRISDbits.TRISD2 = 1;
-
-    PWM6CONbits.PWM6POL = 0;
-    PWM7CONbits.PWM7POL = 0;
-
-    PWM6DCH = 0x00;
-    PWM6DCL = 0x00;
-    PWM7DCH = 0x00;
-    PWM7DCL = 0x00;
-
-    T2CONbits.T2CKPS = 0b110;
-    T2CONbits.T2OUTPS = 0b0000;
-    T2CONbits.TMR2ON = 1;
-    PR2 = 0x3F;
-
-
-
-
-
-    TRISCbits.TRISC1 = 0;
-    TRISDbits.TRISD2 = 0;
-
-    PWM6CONbits.PWM6EN = 1;
-    PWM7CONbits.PWM7EN = 1;
-}
 
 void picInit() {
 

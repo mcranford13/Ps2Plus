@@ -10,7 +10,7 @@
 
 #include <xc.h> 
 
-#define ACK RA4
+
 
 #define SQUARE RA0
 #define TRIANGLE RA1
@@ -40,16 +40,23 @@
 #define SMALL_MOTOR RD4
 
 
-// LUT register positions
-#define LUT_LX  0x000
-#define LUT_LY  0x100
-#define LUT_RX  0x200
-#define LUT_RY  0x300
-
 #define ANC1 0b10001
 #define ANC0 0b010000
 #define ANC6 0b010110
 #define ANC7 0b010111
+
+#define LX_MIN_EEPROM 0x60
+#define LX_MAX_EEPROM 0x61
+#define LY_MIN_EEPROM 0x62
+#define LY_MAX_EEPROM 0x63
+
+#define RX_MIN_EEPROM 0x64
+#define RX_MAX_EEPROM 0x65
+#define RY_MIN_EEPROM 0x66
+#define RY_MAX_EEPROM 0x67
+
+
+
 
 typedef enum {
     //values are in order for data_byte1 LSB first
@@ -61,7 +68,7 @@ typedef enum {
     R3,
     L3,
     Select
-}digitalByteFirst;
+} digitalByteFirst;
 
 typedef enum {
     //values are in order for data_byte2 LSB first    
@@ -73,7 +80,8 @@ typedef enum {
     L1,
     R2,
     L2
-}digitalByteSecond;
+} digitalByteSecond;
+
 
 extern char digitalStateFirst = 0xFF;
 extern char digitalStateSecond = 0xFF;
@@ -82,14 +90,18 @@ extern char analogStateFirst[8] = {0};
 extern char analogStateSecond[8] = {0};
 
 //analog stick bytes
-extern char rxData = 0xFE;
-extern char ryData = 0xFE;
-extern char lxData = 0xFE;
-extern char lyData = 0xFE;
+extern char rxData = 0xF7;
+extern char ryData = 0xF7;
+extern char lxData = 0xF7;
+extern char lyData = 0xF7;
 
-//char LUT[1024];
+char lutLX[256];
+char lutLY[256];
+char lutRX[256];
+char lutRY[256];
 
-unsigned char debounceLoops = 3; 
+unsigned char defaultAnalogSticks = 1;
+unsigned char debounceLoops = 3;
 
 unsigned char DigitalControllerByte1[8];
 unsigned char DigitalControllerByte2[8];
@@ -109,6 +121,8 @@ void readController(char analogMode);
 unsigned int readADC(int channel);
 void readControllerAnalog();
 char reversebyte(char byte);
-//void LUTinit();
+void lutInit();
+void configureController();
+
 
 #endif	/* CONTROLLER_H */

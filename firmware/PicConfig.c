@@ -21,44 +21,7 @@ void adcInit() {
     ADCON0bits.ADON = 1;
 }
 
-void pwmInit() {
 
-    //move PWM6 and 7 to other pins
-    //PWM PPS
-    //RxyPPS = 0x0E; //PPS PWM6 -- Port A or D only
-    //RXXPPs = 0x0F;  //PPS PWM7 -- Port A or C only   
-    ppsUnlock();
-    RC3PPS = 0x0F;
-    RD1PPS = 0x0E;
-    ppsLock();
-
-    //disable TRIS bits 
-    TRISCbits.TRISC1 = 1;
-    TRISDbits.TRISD2 = 1;
-
-    PWM6CONbits.PWM6POL = 0; //PWM output is active high
-    PWM7CONbits.PWM7POL = 0;
-
-    PWM6DCH = 0x00; //duty cycle high bits
-    PWM6DCL = 0x00; //duty cycle low bits
-    PWM7DCH = 0x00; //duty cycle high bits
-    PWM7DCL = 0x00; //duty cycle low bits    
-
-    T2CONbits.T2CKPS = 0b110; //tmr2 prescaler value. 0b110 = 1:64
-    T2CONbits.T2OUTPS = 0b0000; //tmr2 postscaler value. 0 = 1:1
-    T2CONbits.TMR2ON = 1; //start tmr2
-    PR2 = 0x3F; //8 bit duty cycle resolution
-
-    //PWM period = (PR2+1)*4*(1/FOSC)*T2CKPS
-    //1:64 prescale, 1:1 postscale, PR2 = 63 -- PWM frequency = 1,953Hz 	
-
-    //clear TRIS pins to set pwm output driver
-    TRISCbits.TRISC1 = 0;
-    TRISDbits.TRISD2 = 0;
-
-    PWM6CONbits.PWM6EN = 1; //pwm module is enabled
-    PWM7CONbits.PWM7EN = 1;
-}
 
 void picInit() {
 
