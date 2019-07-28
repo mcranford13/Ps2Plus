@@ -18,7 +18,6 @@ This project consists of several smaller projects each with its own folder, and 
 
 ## **TODO**
 
-- Different analog sticks support
 - Bootloader
 - PS2 Updater Application
 
@@ -27,6 +26,19 @@ This project consists of several smaller projects each with its own folder, and 
 You will need a pickit3, MPLAB (_free_), and XC8 compiler to flash this. To build from source, open the firmware project in MPLAB and click 'run'. This will compile the project and then initiate the transfer to the mcu.
 
 The correct pinout of the microcontroller can be found in the **docs** folder.
+
+## **Analog Stick Setup**
+
+> 1. Press Select, L1, and L2 to enter configuration mode. The PS2 should say that there is no controller connected.
+> 2. Move the analog stick slowly in a circle.
+> 3. Press Select, L1, and R1 to exit. The PS2 should now recognize the controller.
+> 4. Reboot the controller (rebooting the ps2 works too).
+> Analog sticks should now be working.
+
+To set the analog sticks back to the default values:
+> 1. Press Select, L1, and L2 to enter configuration mode.
+> 2. Press L2, R2, Select, Start.
+> 3. Reboot controller (or ps2).
 
 ## **Acknowledgements**
 
