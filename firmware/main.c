@@ -392,17 +392,17 @@ void main(void) {
     char slaveSelect;
     char slaveSelectStatePrev = 0;
     char count = 0;
-    ACK = 1;
+    ACK = 1; //Acknowledge is an active low line, so we initialize it high.
    
     
     while (1) {
 
         
-        //0111 1111 0101 1111
-        if(digitalStateFirst == 0x7F && digitalStateSecond == 0x5F){
-            
+        //L1 L2 Select
+        if(digitalStateFirst == 0x7F && digitalStateSecond == 0x5F){ 
             
             configureController();
+
         }
         
         

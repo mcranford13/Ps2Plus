@@ -1,8 +1,6 @@
 /* 
  * File: Spi.h  
  * Author: Matthew Cranford
- * Comments:
- * Revision history: 
  */
 
 #ifndef SPI_H

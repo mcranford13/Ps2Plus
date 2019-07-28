@@ -1,16 +1,12 @@
 /* 
  * File:  Controller.h 
  * Author: Matthew Cranford
- * Comments:
- * Revision history: 
  */
 
 #ifndef CONTROLLER_H
 #define	CONTROLLER_H
 
 #include <xc.h> 
-
-
 
 #define SQUARE RA0
 #define TRIANGLE RA1
@@ -39,7 +35,6 @@
 
 #define SMALL_MOTOR RD4
 
-
 #define ANC1 0b10001
 #define ANC0 0b010000
 #define ANC6 0b010110
@@ -54,9 +49,6 @@
 #define RX_MAX_EEPROM 0x65
 #define RY_MIN_EEPROM 0x66
 #define RY_MAX_EEPROM 0x67
-
-
-
 
 typedef enum {
     //values are in order for data_byte1 LSB first
@@ -100,7 +92,6 @@ char lutLY[256];
 char lutRX[256];
 char lutRY[256];
 
-unsigned char defaultAnalogSticks = 1;
 unsigned char debounceLoops = 3;
 
 unsigned char DigitalControllerByte1[8];
@@ -113,14 +104,12 @@ unsigned char IndexDigitalByte2[8] = {0};
 
 unsigned char index = 0;
 
-unsigned char analogMin = 0;
-unsigned char analogMax = 255;
 
+unsigned int readADC(int channel);
+char reversebyte(char byte);
 
 void readController(char analogMode);
-unsigned int readADC(int channel);
 void readControllerAnalog();
-char reversebyte(char byte);
 void lutInit();
 void configureController();
 

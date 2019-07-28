@@ -1,3 +1,9 @@
+/*
+ * File:   PicConfig.C
+ * Author: Matthew Cranford 
+ */
+
+
 #include "PicConfig.h"
 
 void ppsUnlock() {

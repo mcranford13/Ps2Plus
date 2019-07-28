@@ -49,7 +49,8 @@ extern "C" {
 
 #define _XTAL_FREQ 32000000
     
-#define ACK RA4 
+#define ACK RA4
+#define SLAVE_SELECT RA5
 
 void picInit(void);
 void pwmInit(void);

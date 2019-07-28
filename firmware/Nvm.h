@@ -1,6 +1,6 @@
 /* 
  * File:   Nvm.h
- * Author: matthew
+ * Author: Matthew Cranford
  *
  * Created on July 23, 2019, 2:41 PM
  */
@@ -14,15 +14,11 @@
 extern "C" {
 #endif
 
+    char eepromRead(unsigned char address);
 
     void eepromWrite(unsigned char address, char data);
-    char eepromRead(unsigned char address);
-    void eepromWriteBuf(unsigned char address, unsigned char *buffer, unsigned char length);
-    void eepromReadBuf(unsigned char address, unsigned char *buffer, unsigned char length);
     void nvmUnlock();
     
-
-
 #ifdef	__cplusplus
 }
 #endif

@@ -36,10 +36,6 @@ extern "C" {
 #define ANALOG_MODE 0x9E                //0x79 reversed 
 #define END_HEADER 0x5A    
 
-#define SLAVE_SELECT RA5
-
-
-
 #ifdef	__cplusplus
 }
 #endif

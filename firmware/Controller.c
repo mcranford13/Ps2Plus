@@ -1,6 +1,6 @@
 /*
  * File:   Pins.C
- * Author: 
+ * Author: Matthew Cranford & Gunnar Turnquist 
  *
  * Created on May 24, 2018, 9:15 AM
  */
@@ -32,11 +32,6 @@ void readController(char analogMode) {
 
     //Debounce inputs
 
-    /*
-     NOTE: This debounce code relies on a loop function to check if a state is valid. This means that a loop could take 1 nS or 1 mS
-     * Depending on the conditions. In testing it appears to work just fine without issues. Will have to test under load.
-     
-     */
 
     if (index > Select) {
         index = 0;
@@ -120,8 +115,7 @@ void lutInit() {
             lutLX[position] = 0;
         } else if (position > lxMax) {
             lutLX[position] = 255;
-            //} else if (position < (DEAD_ZONE + deadZone) && position > (DEAD_ZONE - deadZone)) {
-            //lutX[position] = 127;
+           
         } else {
             lutLX[position] = Map(position, lxMin, lxMax, 0, 255);
         }
@@ -131,8 +125,7 @@ void lutInit() {
             lutLY[position] = 0;
         } else if (position > lyMax) {
             lutLY[position] = 255;
-            //} else if (position < (DEAD_ZONE + deadZone) && position > (DEAD_ZONE - deadZone)) {
-            //  lutY[position] = 127;
+        
         } else {
             lutLY[position] = Map(position, lyMin, lyMax, 0, 255);
         }
@@ -142,8 +135,7 @@ void lutInit() {
             lutRX[position] = 0;
         } else if (position > rxMax) {
             lutRX[position] = 255;
-            //} else if (position < (DEAD_ZONE + deadZone) && position > (DEAD_ZONE - deadZone)) {
-            //  lutY[position] = 127;
+           
         } else {
             lutRX[position] = Map(position, rxMin, rxMax, 0, 255);
         }
@@ -153,8 +145,7 @@ void lutInit() {
             lutRY[position] = 0;
         } else if (position > ryMax) {
             lutRY[position] = 255;
-            //} else if (position < (DEAD_ZONE + deadZone) && position > (DEAD_ZONE - deadZone)) {
-            //  lutY[position] = 127;
+           
         } else {
             lutRY[position] = Map(position, ryMin, ryMax, 0, 255);
         }
@@ -220,7 +211,7 @@ void configureController() {
 
         readController(0); //Only read the digital buttons
 
-        //01101111 0011 1111
+        
         if (digitalStateFirst == 0x6F && digitalStateSecond == 0x3F) { //L2 R2 Start Select
             // Set default values
 

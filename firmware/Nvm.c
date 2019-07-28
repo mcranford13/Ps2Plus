@@ -1,3 +1,9 @@
+/*
+ * File:   Nvm.c (Non-Volatile Memory)
+ * Author: Matthew Cranford 
+ */
+
+
 #include "Nvm.h"
 
 void eepromWrite(unsigned char address, char data) {
@@ -24,8 +30,6 @@ void eepromWrite(unsigned char address, char data) {
     if (interruptStatus) INTCONbits.GIE = 1;
 }
 
-
-
 char eepromRead(unsigned char address) {
 
     char data;
@@ -41,14 +45,11 @@ char eepromRead(unsigned char address) {
 
 }
 
-
-
 void nvmUnlock() {
 
     NVMCON2 = 0x55;
     NVMCON2 = 0xAA;
     NVMCON1bits.WR = 1;
-
 
 }
 
