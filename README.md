@@ -29,8 +29,8 @@ The correct pinout of the microcontroller can be found in the **docs** folder.
 
 ## **Analog Stick Setup**
 
-> 1. Press Select, L1, and L2 to enter configuration mode. The PS2 should say that there is no controller connected.
-> 2. Move the analog stick slowly in a circle.
+> 1. Press Select, L1, and L2 to enter configuration mode. The PS2 should say that there is no controller connected (if you are in a game).
+> 2. Move the analog sticks slowly in a circle.
 > 3. Press Select, L1, and R1 to exit. The PS2 should now recognize the controller.
 > 4. Reboot the controller (rebooting the ps2 works too).
 > Analog sticks should now be working.
