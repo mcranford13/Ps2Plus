@@ -40,6 +40,11 @@ To set the analog sticks back to the default values:
 > 2. Press L2, R2, Select, Start.
 > 3. Reboot controller (or ps2).
 
+## **Hardware**
+Please note that this is my first pcb design and if there are mistakes or any room for improvement please make an issue or a pull request. I am always happy to learn and improve. 
+
+I have recieved feedback that the pad layout of the pcb is not optimal, this occured due to the pins chosen during the prototyping phase and when I switched from the DIP to the TQFP. I intend to update this but I am been really busy with school and life. Therefore I will release it how it is for now, and update it when I get a chance. If anyone would like to submit an updated pcb, I'd be happy to include it. Thanks for your understanding.
+
 ## **Acknowledgements**
 
 This project has only moved forward due to these individuals and sites (in no particular order):
